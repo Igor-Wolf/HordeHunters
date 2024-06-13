@@ -1,0 +1,273 @@
+[gd_scene load_steps=20 format=3 uid="uid://cakgbyex2o2xn"]
+
+[ext_resource type="Texture2D" uid="uid://dk7vuejdyqh8q" path="res://addons/Jungle Pack/Afternoon/Jungle_Afternoon_6.jpg" id="1_jhcuh"]
+[ext_resource type="Script" path="res://ui/credits_ui.gd" id="1_q3w7w"]
+[ext_resource type="Texture2D" uid="uid://cm2pebd7hjgts" path="res://addons/Tiny Swords/UI/Ribbons/Ribbon_Red_3Slides.png" id="2_7j45o"]
+[ext_resource type="Texture2D" uid="uid://bfl0nawrd2oqp" path="res://addons/Tiny Swords/UI/Banners/Banner_Vertical.png" id="3_seog2"]
+[ext_resource type="Texture2D" uid="uid://chc3qx3hgpae0" path="res://addons/Tiny Swords/UI/Buttons/Button_Blue.png" id="4_378ln"]
+[ext_resource type="Texture2D" uid="uid://dq8frci2nfyr7" path="res://addons/Tiny Swords/UI/Buttons/Button_Hover.png" id="5_6bqje"]
+[ext_resource type="Texture2D" uid="uid://divxeb51qhg7b" path="res://addons/Tiny Swords/UI/Buttons/Button_Blue_Pressed.png" id="6_rlq1u"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_dyss3"]
+texture = ExtResource("1_jhcuh")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_wkgot"]
+texture = ExtResource("2_7j45o")
+texture_margin_left = 64.0
+texture_margin_right = 64.0
+axis_stretch_horizontal = 2
+
+[sub_resource type="SystemFont" id="SystemFont_pjl27"]
+font_names = PackedStringArray("Impact")
+subpixel_positioning = 0
+
+[sub_resource type="LabelSettings" id="LabelSettings_3kku7"]
+line_spacing = 20.0
+font = SubResource("SystemFont_pjl27")
+font_size = 34
+outline_size = 9
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_hdl05"]
+texture = ExtResource("3_seog2")
+texture_margin_left = 24.0
+texture_margin_top = 32.0
+texture_margin_right = 24.0
+texture_margin_bottom = 40.0
+region_rect = Rect2(32, 32, 128, 144)
+
+[sub_resource type="SystemFont" id="SystemFont_lmpna"]
+font_names = PackedStringArray("Impact")
+subpixel_positioning = 0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_1wm7e"]
+texture = ExtResource("4_378ln")
+texture_margin_left = 16.0
+texture_margin_top = 8.0
+texture_margin_right = 16.0
+texture_margin_bottom = 24.0
+modulate_color = Color(0.552758, 0.706428, 0.739645, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_mhhe5"]
+texture = ExtResource("5_6bqje")
+texture_margin_left = 16.0
+texture_margin_top = 8.0
+texture_margin_right = 16.0
+texture_margin_bottom = 24.0
+region_rect = Rect2(0, 0, 64, 64)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_icil6"]
+texture = ExtResource("6_rlq1u")
+texture_margin_left = 16.0
+texture_margin_top = 16.0
+texture_margin_right = 16.0
+texture_margin_bottom = 24.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_u4nfj"]
+texture = ExtResource("5_6bqje")
+texture_margin_left = 16.0
+texture_margin_top = 8.0
+texture_margin_right = 16.0
+texture_margin_bottom = 24.0
+region_rect = Rect2(0, 0, 64, 64)
+
+[sub_resource type="SystemFont" id="SystemFont_4rv6n"]
+font_names = PackedStringArray("Impact")
+subpixel_positioning = 0
+
+[sub_resource type="SystemFont" id="SystemFont_kh2pe"]
+font_names = PackedStringArray("Impact")
+subpixel_positioning = 0
+
+[node name="CreditsUi" type="CanvasLayer"]
+script = ExtResource("1_q3w7w")
+
+[node name="Panel" type="Panel" parent="."]
+offset_right = 1152.0
+offset_bottom = 648.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_dyss3")
+
+[node name="TopPanel" type="Panel" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -139.0
+offset_top = -283.5
+offset_right = 139.0
+offset_bottom = -190.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_wkgot")
+
+[node name="CreditsLabel" type="Label" parent="TopPanel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -58.5
+offset_top = -31.5
+offset_right = 58.5
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "CREDITS"
+label_settings = SubResource("LabelSettings_3kku7")
+
+[node name="Panel2" type="Panel" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -392.0
+offset_top = -183.5
+offset_right = 392.0
+offset_bottom = 291.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_hdl05")
+
+[node name="ReturnCredits" type="Button" parent="Panel2"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(200, 55)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -100.0
+offset_top = 130.5
+offset_right = 100.0
+offset_bottom = 193.5
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = SubResource("SystemFont_lmpna")
+theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = SubResource("StyleBoxTexture_1wm7e")
+theme_override_styles/hover = SubResource("StyleBoxTexture_mhhe5")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_icil6")
+theme_override_styles/focus = SubResource("StyleBoxTexture_u4nfj")
+text = "RETURN"
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Panel2"]
+custom_minimum_size = Vector2(520, 0)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -335.0
+offset_top = -193.0
+offset_right = 335.0
+offset_bottom = 107.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="RichTextLabel" parent="Panel2/ScrollContainer"]
+custom_minimum_size = Vector2(670, 2700)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 4
+theme_override_fonts/normal_font = SubResource("SystemFont_4rv6n")
+theme_override_fonts/bold_font = SubResource("SystemFont_kh2pe")
+theme_override_font_sizes/normal_font_size = 22
+theme_override_font_sizes/bold_font_size = 22
+bbcode_enabled = true
+text = "[font_size=28][center][b]HORDE HUNTERS[/b][/center][/font_size]
+[center]DEVELOPED BY [color=#00532A]FAKER ZERO[/color][/center]
+
+[font_size=24][u]DIRECTORS:[/u][/font_size]
+
+    [b]CREATIVE DIRECTOR:[/b] IGOR BARBOSA
+    [b]ART DIRECTOR:[/b] IGOR BARBOSA
+    [b]GAME DIRECTOR:[/b] IGOR BARBOSA
+    [b]TECHNICAL DIRECTOR:[/b] IGOR BARBOSA
+
+[font_size=24][u]PRODUCTION:[/u][/font_size]
+
+    [b]EXECUTIVE PRODUCER:[/b] IGOR BARBOSA
+    [b]PRODUCER:[/b] IGOR BARBOSA
+    [b]PRODUCTION COORDINATOR:[/b] IGOR BARBOSA
+
+[font_size=24][u]DEVELOPMENT:[/u][/font_size]
+
+    [b]LEAD DESIGNER:[/b] IGOR BARBOSA
+    [b]LEVEL DESIGNERS:[/b] IGOR BARBOSA
+    [b]WRITER:[/b] IGOR BARBOSA
+    [b]SOUND DIRECTOR:[/b] IGOR BARBOSA
+
+[font_size=24][u]PROGRAMMING:[/u][/font_size]
+
+    [b]LEAD PROGRAMMER:[/b] IGOR BARBOSA
+    [b]GAMEPLAY PROGRAMMERS:[/b] IGOR BARBOSA
+
+[font_size=24][u]ART:[/u][/font_size]
+
+    [b]LEAD ARTIST:[/b] IGOR BARBOSA
+    [b]CHARACTER ARTISTS:[/b] IGOR BARBOSA
+    [b]ENVIRONMENT ARTISTS:[/b] IGOR BARBOSA
+    [b]CONCEPT ARTISTS:[/b] IGOR BARBOSA
+    [b]ANIMATORS:[/b] IGOR BARBOSA
+
+[font_size=24][u]AUDIO:[/u][/font_size]
+
+    [b]SOUND DESIGNER:[/b] IGOR BARBOSA
+    [b]AUDIO ENGINEER:[/b] IGOR BARBOSA
+
+[font_size=24][u]QUALITY ASSURANCE:[/u][/font_size]
+
+    [b]HEAD OF QA:[/b] IGOR BARBOSA
+    [b]QA TESTERS:[/b] -
+
+[font_size=24][u]MARKETING AND PUBLIC RELATIONS:[/u][/font_size]
+
+    [b]HEAD OF MARKETING:[/b] -
+    [b]MARKETING SPECIALIST:[/b] -
+    [b]PUBLIC RELATIONS MANAGER:[/b] -
+
+[font_size=24][u]LOCALIZATION:[/u][/font_size]
+
+    [b]LOCALIZATION COORDINATOR:[/b] -
+    [b]TRANSLATORS:[/b] -
+
+[font_size=24][u]SPECIAL THANKS:[/u][/font_size]
+
+    DIGITAL INNOVATION ONE - DIO
+    PROFESSOR RAFA SKOBERG
+	PROFESSOR FELIPE AGUIAR
+    MY AMAZING FANS AND SUPPORTERS!
+
+[font_size=24][u]ASSETS PROVIDED BY:[/u][/font_size]
+
+    KENNEY VLEUGELS - KENNEY PARTICLES PACK
+    VINA - JUNGLE PACK
+    MATT FIRTH (SHIKASHIPX) - SHIKASHI'S FANTASY ICONS PACK V2
+    PIXEL FROG - TINY SWORDS
+
+    TOM MUSIC - FREE FANTASY 200 SFX PACK
+    SARA GARRARD (SONATINA) - LET'S ADVENTURE | FORTUNATA
+    OBSYDIANX - INTERFACE SFX PACK 1
+"
+autowrap_mode = 2
+
+[node name="Cheat" type="Button" parent="."]
+offset_left = 797.0
+offset_top = 413.0
+offset_right = 856.0
+offset_bottom = 444.0
+text = "CHEAT"
+
+[connection signal="mouse_entered" from="Panel2/ReturnCredits" to="." method="_on_return_mouse_entered"]
+[connection signal="pressed" from="Panel2/ReturnCredits" to="." method="_on_return_pressed"]
+[connection signal="pressed" from="Cheat" to="." method="_on_cheat_pressed"]

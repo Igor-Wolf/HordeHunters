@@ -1,0 +1,380 @@
+[gd_scene load_steps=20 format=3 uid="uid://beh8b8ghdyncp"]
+
+[ext_resource type="Texture2D" uid="uid://cm2pebd7hjgts" path="res://addons/Tiny Swords/UI/Ribbons/Ribbon_Red_3Slides.png" id="1_7mgq4"]
+[ext_resource type="Texture2D" uid="uid://baqx0ecgu5jpb" path="res://addons/Tiny Swords/UI/Banners/Banner_Horizontal.png" id="2_ld6bx"]
+[ext_resource type="Texture2D" uid="uid://chc3qx3hgpae0" path="res://addons/Tiny Swords/UI/Buttons/Button_Blue.png" id="3_23rju"]
+[ext_resource type="Script" path="res://ui/statistics_ui.gd" id="3_jaide"]
+[ext_resource type="Texture2D" uid="uid://dq8frci2nfyr7" path="res://addons/Tiny Swords/UI/Buttons/Button_Hover.png" id="4_w6kpj"]
+[ext_resource type="Texture2D" uid="uid://divxeb51qhg7b" path="res://addons/Tiny Swords/UI/Buttons/Button_Blue_Pressed.png" id="5_bv5mx"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_qkrhg"]
+texture = ExtResource("1_7mgq4")
+texture_margin_left = 64.0
+texture_margin_right = 64.0
+axis_stretch_horizontal = 2
+
+[sub_resource type="SystemFont" id="SystemFont_s6xf1"]
+font_names = PackedStringArray("Impact")
+subpixel_positioning = 0
+
+[sub_resource type="LabelSettings" id="LabelSettings_uys0w"]
+line_spacing = 20.0
+font = SubResource("SystemFont_s6xf1")
+font_size = 34
+outline_size = 9
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_i460m"]
+texture = ExtResource("2_ld6bx")
+texture_margin_left = 32.0
+texture_margin_top = 96.0
+texture_margin_right = 32.0
+texture_margin_bottom = 96.0
+axis_stretch_horizontal = 2
+axis_stretch_vertical = 1
+region_rect = Rect2(32, 40, 128, 136)
+
+[sub_resource type="SystemFont" id="SystemFont_fbvfu"]
+font_names = PackedStringArray("Impact")
+subpixel_positioning = 0
+
+[sub_resource type="LabelSettings" id="LabelSettings_irrgd"]
+font = SubResource("SystemFont_fbvfu")
+font_size = 30
+font_color = Color(0, 0, 0, 0.870588)
+outline_size = 3
+
+[sub_resource type="SystemFont" id="SystemFont_n4x03"]
+font_names = PackedStringArray("Impact")
+subpixel_positioning = 0
+
+[sub_resource type="LabelSettings" id="LabelSettings_8r7hy"]
+font = SubResource("SystemFont_n4x03")
+font_size = 22
+font_color = Color(0, 0, 0, 0.870588)
+outline_size = 3
+
+[sub_resource type="SystemFont" id="SystemFont_br4fs"]
+font_names = PackedStringArray("Impact")
+subpixel_positioning = 0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_t24ns"]
+texture = ExtResource("3_23rju")
+texture_margin_left = 16.0
+texture_margin_top = 8.0
+texture_margin_right = 16.0
+texture_margin_bottom = 24.0
+modulate_color = Color(0.552758, 0.706428, 0.739645, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_r73hq"]
+texture = ExtResource("4_w6kpj")
+texture_margin_left = 16.0
+texture_margin_top = 8.0
+texture_margin_right = 16.0
+texture_margin_bottom = 24.0
+region_rect = Rect2(0, 0, 64, 64)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_dsddx"]
+texture = ExtResource("5_bv5mx")
+texture_margin_left = 16.0
+texture_margin_top = 16.0
+texture_margin_right = 16.0
+texture_margin_bottom = 24.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_jjrc4"]
+texture = ExtResource("4_w6kpj")
+texture_margin_left = 16.0
+texture_margin_top = 8.0
+texture_margin_right = 16.0
+texture_margin_bottom = 24.0
+region_rect = Rect2(0, 0, 64, 64)
+
+[node name="StatisticsUi" type="CanvasLayer"]
+process_mode = 3
+script = ExtResource("3_jaide")
+
+[node name="Background" type="ColorRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.772549)
+
+[node name="TopPanel" type="Panel" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -139.0
+offset_top = -283.5
+offset_right = 139.0
+offset_bottom = -190.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_qkrhg")
+
+[node name="GameOverLabel" type="Label" parent="TopPanel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -46.0
+offset_top = -21.5
+offset_right = 46.0
+offset_bottom = 1.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "STATISTICS"
+label_settings = SubResource("LabelSettings_uys0w")
+
+[node name="BottonPanel" type="Panel" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -353.5
+offset_top = -155.0
+offset_right = 353.5
+offset_bottom = 254.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_i460m")
+
+[node name="ClassLabel" type="Label" parent="BottonPanel"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -86.5
+offset_top = 26.0
+offset_right = 86.5
+offset_bottom = 64.0
+grow_horizontal = 2
+text = "CLASS
+"
+label_settings = SubResource("LabelSettings_irrgd")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="GridContainer" type="GridContainer" parent="BottonPanel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -256.0
+offset_top = -119.0
+offset_right = 256.0
+offset_bottom = 81.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/h_separation = 50
+columns = 2
+
+[node name="GridContainerLeft" type="GridContainer" parent="BottonPanel/GridContainer"]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+theme_override_constants/h_separation = 25
+theme_override_constants/v_separation = 10
+columns = 2
+
+[node name="Label" type="Label" parent="BottonPanel/GridContainer/GridContainerLeft"]
+layout_mode = 2
+text = "CURENT HEALTH: 
+"
+label_settings = SubResource("LabelSettings_8r7hy")
+
+[node name="Health" type="Label" parent="BottonPanel/GridContainer/GridContainerLeft"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "14:59
+"
+label_settings = SubResource("LabelSettings_8r7hy")
+
+[node name="Label2" type="Label" parent="BottonPanel/GridContainer/GridContainerLeft"]
+layout_mode = 2
+text = "MAX HEALTH: 
+"
+label_settings = SubResource("LabelSettings_8r7hy")
+
+[node name="MaxHealth" type="Label" parent="BottonPanel/GridContainer/GridContainerLeft"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "1234
+"
+label_settings = SubResource("LabelSettings_8r7hy")
+
+[node name="Label3" type="Label" parent="BottonPanel/GridContainer/GridContainerLeft"]
+layout_mode = 2
+text = "STRENGHT:
+"
+label_settings = SubResource("LabelSettings_8r7hy")
+
+[node name="Str" type="Label" parent="BottonPanel/GridContainer/GridContainerLeft"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "1234
+"
+label_settings = SubResource("LabelSettings_8r7hy")
+
+[node name="Label4" type="Label" parent="BottonPanel/GridContainer/GridContainerLeft"]
+layout_mode = 2
+text = "SPEED: 
+"
+label_settings = SubResource("LabelSettings_8r7hy")
+
+[node name="Speed" type="Label" parent="BottonPanel/GridContainer/GridContainerLeft"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "1234
+"
+label_settings = SubResource("LabelSettings_8r7hy")
+
+[node name="Label5" type="Label" parent="BottonPanel/GridContainer/GridContainerLeft"]
+layout_mode = 2
+text = "ARMOR: 
+"
+label_settings = SubResource("LabelSettings_8r7hy")
+
+[node name="Armor" type="Label" parent="BottonPanel/GridContainer/GridContainerLeft"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "1234
+"
+label_settings = SubResource("LabelSettings_8r7hy")
+
+[node name="Label6" type="Label" parent="BottonPanel/GridContainer/GridContainerLeft"]
+layout_mode = 2
+text = "MAGIC: 
+"
+label_settings = SubResource("LabelSettings_8r7hy")
+
+[node name="Magic" type="Label" parent="BottonPanel/GridContainer/GridContainerLeft"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "1234
+"
+label_settings = SubResource("LabelSettings_8r7hy")
+
+[node name="GridContainerRight" type="GridContainer" parent="BottonPanel/GridContainer"]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/h_separation = 25
+theme_override_constants/v_separation = 10
+columns = 2
+
+[node name="Label" type="Label" parent="BottonPanel/GridContainer/GridContainerRight"]
+layout_mode = 2
+text = "TIME SURVIVED: 
+"
+label_settings = SubResource("LabelSettings_8r7hy")
+
+[node name="TimeLabel" type="Label" parent="BottonPanel/GridContainer/GridContainerRight"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "14:59
+"
+label_settings = SubResource("LabelSettings_8r7hy")
+
+[node name="Label2" type="Label" parent="BottonPanel/GridContainer/GridContainerRight"]
+layout_mode = 2
+text = "MONSTERS DEFEATED: 
+"
+label_settings = SubResource("LabelSettings_8r7hy")
+
+[node name="MonstersLabel" type="Label" parent="BottonPanel/GridContainer/GridContainerRight"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "1234
+"
+label_settings = SubResource("LabelSettings_8r7hy")
+
+[node name="Label3" type="Label" parent="BottonPanel/GridContainer/GridContainerRight"]
+layout_mode = 2
+text = "MEAT COLLECTED:
+"
+label_settings = SubResource("LabelSettings_8r7hy")
+
+[node name="MeatLabel" type="Label" parent="BottonPanel/GridContainer/GridContainerRight"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "1234
+"
+label_settings = SubResource("LabelSettings_8r7hy")
+
+[node name="Label4" type="Label" parent="BottonPanel/GridContainer/GridContainerRight"]
+layout_mode = 2
+text = "EXPERIENCE EARNED: 
+"
+label_settings = SubResource("LabelSettings_8r7hy")
+
+[node name="ExpEarned" type="Label" parent="BottonPanel/GridContainer/GridContainerRight"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "1234
+"
+label_settings = SubResource("LabelSettings_8r7hy")
+
+[node name="Label5" type="Label" parent="BottonPanel/GridContainer/GridContainerRight"]
+layout_mode = 2
+text = "TOTAL GOLD: 
+"
+label_settings = SubResource("LabelSettings_8r7hy")
+
+[node name="TotalGold" type="Label" parent="BottonPanel/GridContainer/GridContainerRight"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "1234
+"
+label_settings = SubResource("LabelSettings_8r7hy")
+
+[node name="Return" type="Button" parent="BottonPanel"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(200, 55)
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -100.0
+offset_top = -103.0
+offset_right = 100.0
+offset_bottom = -40.0
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_horizontal = 4
+focus_neighbor_top = NodePath("../SFX")
+focus_neighbor_bottom = NodePath("../BGM")
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = SubResource("SystemFont_br4fs")
+theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = SubResource("StyleBoxTexture_t24ns")
+theme_override_styles/hover = SubResource("StyleBoxTexture_r73hq")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_dsddx")
+theme_override_styles/focus = SubResource("StyleBoxTexture_jjrc4")
+text = "RETURN"
+
+[node name="auxi" type="Button" parent="."]
+unique_name_in_owner = true
+visible = false
+offset_left = 229.0
+offset_top = 426.0
+offset_right = 445.0
+offset_bottom = 525.0
+focus_neighbor_top = NodePath("../BottonPanel/Return")
+focus_neighbor_right = NodePath("../BottonPanel/Return")
+focus_neighbor_bottom = NodePath("../BottonPanel/Return")
+focus_next = NodePath("../BottonPanel/Return")
+
+[connection signal="mouse_entered" from="BottonPanel/Return" to="." method="_on_return_mouse_entered"]
+[connection signal="pressed" from="BottonPanel/Return" to="." method="_on_return_pressed"]

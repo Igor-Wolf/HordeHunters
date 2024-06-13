@@ -1,0 +1,8 @@
+[gd_scene load_steps=3 format=3 uid="uid://p0p5bci30caj"]
+
+[ext_resource type="PackedScene" uid="uid://bewubpplhvfbe" path="res://misc/scene_itens/skull.tscn" id="1_wf2ng"]
+[ext_resource type="Script" path="res://misc/scene_itens/big_skull.gd" id="2_vpc43"]
+
+[node name="BigSkull" instance=ExtResource("1_wf2ng")]
+scale = Vector2(1.62376, 1.62376)
+script = ExtResource("2_vpc43")

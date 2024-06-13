@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://dvddwanq71hu6"]
+
+[ext_resource type="Texture2D" uid="uid://7elyah2opexg" path="res://addons/Tiny Swords/UI/Icons/Disable_01.png" id="1_l7b5q"]
+
+[node name="BombMarker" type="Node2D"]
+z_index = -1
+y_sort_enabled = true
+
+[node name="Node2D" type="Sprite2D" parent="."]
+modulate = Color(0, 0, 0, 1)
+texture = ExtResource("1_l7b5q")

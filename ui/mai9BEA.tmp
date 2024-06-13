@@ -1,0 +1,140 @@
+[gd_scene load_steps=14 format=3 uid="uid://ok16dgyoyxee"]
+
+[ext_resource type="Texture2D" uid="uid://djiyc66xnioln" path="res://addons/Jungle Pack/Afternoon/Jungle_Afternoon_1.jpg" id="1_obp0b"]
+[ext_resource type="Script" path="res://ui/main_menu.gd" id="1_u7gki"]
+[ext_resource type="PackedScene" uid="uid://bic2tm45uhl6x" path="res://ui/options.tscn" id="2_jgrth"]
+[ext_resource type="PackedScene" uid="uid://b5bic01m54bol" path="res://misc/audio_menu.tscn" id="3_lvggl"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_wptpc"]
+texture = ExtResource("1_obp0b")
+
+[sub_resource type="SystemFont" id="SystemFont_e3fot"]
+font_names = PackedStringArray("Impact")
+
+[sub_resource type="SystemFont" id="SystemFont_22snj"]
+font_names = PackedStringArray("Impact")
+
+[sub_resource type="SystemFont" id="SystemFont_nvg5e"]
+font_names = PackedStringArray("Impact")
+
+[sub_resource type="SystemFont" id="SystemFont_ddfqb"]
+font_names = PackedStringArray("Impact")
+
+[sub_resource type="SystemFont" id="SystemFont_6nbpc"]
+font_names = PackedStringArray("Impact")
+
+[sub_resource type="LabelSettings" id="LabelSettings_on3gl"]
+font = SubResource("SystemFont_6nbpc")
+font_size = 24
+outline_size = 3
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="SystemFont" id="SystemFont_m1avk"]
+font_names = PackedStringArray("Impact")
+
+[sub_resource type="LabelSettings" id="LabelSettings_5o8vm"]
+font = SubResource("SystemFont_m1avk")
+font_size = 80
+font_color = Color(0, 0.32549, 0.184314, 1)
+outline_size = 9
+shadow_size = 20
+shadow_color = Color(0, 0, 0, 0.988235)
+shadow_offset = Vector2(5, 5)
+
+[node name="MainMenu" type="CanvasLayer"]
+script = ExtResource("1_u7gki")
+options_template = ExtResource("2_jgrth")
+
+[node name="Panel" type="Panel" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_wptpc")
+
+[node name="MainMenu" type="VBoxContainer" parent="Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -97.5
+offset_top = 3.5
+offset_right = 97.5
+offset_bottom = 218.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="NewGame" type="Button" parent="Panel/MainMenu"]
+unique_name_in_owner = true
+layout_mode = 2
+focus_neighbor_top = NodePath("../Quit")
+focus_neighbor_bottom = NodePath("../Options")
+theme_override_fonts/font = SubResource("SystemFont_e3fot")
+theme_override_font_sizes/font_size = 24
+text = "NEW GAME"
+
+[node name="Options" type="Button" parent="Panel/MainMenu"]
+unique_name_in_owner = true
+layout_mode = 2
+focus_neighbor_top = NodePath("../NewGame")
+focus_neighbor_bottom = NodePath("../Credits")
+theme_override_fonts/font = SubResource("SystemFont_22snj")
+theme_override_font_sizes/font_size = 24
+text = "OPTIONS"
+
+[node name="Credits" type="Button" parent="Panel/MainMenu"]
+unique_name_in_owner = true
+layout_mode = 2
+focus_neighbor_top = NodePath("../Options")
+focus_neighbor_bottom = NodePath("../Quit")
+theme_override_fonts/font = SubResource("SystemFont_nvg5e")
+theme_override_font_sizes/font_size = 24
+text = "CREDITS"
+
+[node name="Quit" type="Button" parent="Panel/MainMenu"]
+unique_name_in_owner = true
+layout_mode = 2
+focus_neighbor_top = NodePath("../Credits")
+focus_neighbor_bottom = NodePath("../NewGame")
+theme_override_fonts/font = SubResource("SystemFont_ddfqb")
+theme_override_font_sizes/font_size = 24
+text = "QUIT"
+
+[node name="Version" type="Label" parent="Panel"]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 13.0
+offset_top = -35.0
+offset_right = 55.0
+offset_bottom = -12.0
+grow_vertical = 0
+text = "v . 0 . 5"
+label_settings = SubResource("LabelSettings_on3gl")
+
+[node name="Title" type="Label" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -81.5
+offset_top = -107.5
+offset_right = 81.5
+offset_bottom = -84.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "EPIC HORD HUNTERS"
+label_settings = SubResource("LabelSettings_5o8vm")
+
+[node name="Audio" parent="." instance=ExtResource("3_lvggl")]
+unique_name_in_owner = true
+
+[connection signal="pressed" from="Panel/MainMenu/NewGame" to="." method="_on_new_game_pressed"]
+[connection signal="pressed" from="Panel/MainMenu/Options" to="." method="_on_options_pressed"]
+[connection signal="pressed" from="Panel/MainMenu/Credits" to="." method="_on_credits_pressed"]
+[connection signal="pressed" from="Panel/MainMenu/Quit" to="." method="_on_quit_pressed"]

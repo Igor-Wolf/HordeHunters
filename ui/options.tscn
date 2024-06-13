@@ -1,0 +1,314 @@
+[gd_scene load_steps=27 format=3 uid="uid://bic2tm45uhl6x"]
+
+[ext_resource type="Script" path="res://ui/options.gd" id="1_ciebq"]
+[ext_resource type="Texture2D" uid="uid://cm2pebd7hjgts" path="res://addons/Tiny Swords/UI/Ribbons/Ribbon_Red_3Slides.png" id="3_mdj0o"]
+[ext_resource type="Texture2D" uid="uid://baqx0ecgu5jpb" path="res://addons/Tiny Swords/UI/Banners/Banner_Horizontal.png" id="4_itduv"]
+[ext_resource type="Texture2D" uid="uid://chc3qx3hgpae0" path="res://addons/Tiny Swords/UI/Buttons/Button_Blue.png" id="5_lbsvs"]
+[ext_resource type="Texture2D" uid="uid://dq8frci2nfyr7" path="res://addons/Tiny Swords/UI/Buttons/Button_Hover.png" id="6_e608u"]
+[ext_resource type="Texture2D" uid="uid://divxeb51qhg7b" path="res://addons/Tiny Swords/UI/Buttons/Button_Blue_Pressed.png" id="7_vg64b"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_84kc0"]
+texture = ExtResource("3_mdj0o")
+texture_margin_left = 64.0
+texture_margin_right = 64.0
+axis_stretch_horizontal = 2
+
+[sub_resource type="SystemFont" id="SystemFont_uxrcn"]
+font_names = PackedStringArray("Impact")
+subpixel_positioning = 0
+
+[sub_resource type="LabelSettings" id="LabelSettings_wgpwk"]
+line_spacing = 20.0
+font = SubResource("SystemFont_uxrcn")
+font_size = 34
+outline_size = 9
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_1bn1l"]
+texture = ExtResource("4_itduv")
+texture_margin_left = 24.0
+texture_margin_top = 8.0
+texture_margin_right = 24.0
+texture_margin_bottom = 40.0
+region_rect = Rect2(32, 48, 128, 128)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_32wbx"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_brrcr"]
+bg_color = Color(0, 0, 0, 1)
+corner_detail = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4r2dy"]
+bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="SystemFont" id="SystemFont_28j6q"]
+font_names = PackedStringArray("Impact")
+subpixel_positioning = 0
+
+[sub_resource type="LabelSettings" id="LabelSettings_e6a82"]
+font = SubResource("SystemFont_28j6q")
+font_size = 22
+font_color = Color(0, 0, 0, 1)
+outline_size = 3
+
+[sub_resource type="SystemFont" id="SystemFont_1giys"]
+font_names = PackedStringArray("Impact")
+subpixel_positioning = 0
+
+[sub_resource type="LabelSettings" id="LabelSettings_r60sn"]
+font = SubResource("SystemFont_1giys")
+font_size = 22
+font_color = Color(0, 0, 0, 1)
+outline_size = 3
+
+[sub_resource type="SystemFont" id="SystemFont_ldqsa"]
+font_names = PackedStringArray("Impact")
+subpixel_positioning = 0
+
+[sub_resource type="LabelSettings" id="LabelSettings_kst4f"]
+font = SubResource("SystemFont_ldqsa")
+font_size = 30
+font_color = Color(0, 0, 0, 1)
+outline_size = 6
+
+[sub_resource type="SystemFont" id="SystemFont_wqbm7"]
+font_names = PackedStringArray("Impact")
+subpixel_positioning = 0
+
+[sub_resource type="LabelSettings" id="LabelSettings_3fk6a"]
+font = SubResource("SystemFont_wqbm7")
+font_size = 22
+font_color = Color(0, 0, 0, 1)
+outline_size = 3
+
+[sub_resource type="SystemFont" id="SystemFont_55nn6"]
+font_names = PackedStringArray("Impact")
+subpixel_positioning = 0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_nkg0s"]
+texture = ExtResource("5_lbsvs")
+texture_margin_left = 16.0
+texture_margin_top = 8.0
+texture_margin_right = 16.0
+texture_margin_bottom = 24.0
+modulate_color = Color(0.552758, 0.706428, 0.739645, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_6yopn"]
+texture = ExtResource("6_e608u")
+texture_margin_left = 16.0
+texture_margin_top = 8.0
+texture_margin_right = 16.0
+texture_margin_bottom = 24.0
+region_rect = Rect2(0, 0, 64, 64)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_sl54e"]
+texture = ExtResource("7_vg64b")
+texture_margin_left = 16.0
+texture_margin_top = 16.0
+texture_margin_right = 16.0
+texture_margin_bottom = 24.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_vecyl"]
+texture = ExtResource("6_e608u")
+texture_margin_left = 16.0
+texture_margin_top = 8.0
+texture_margin_right = 16.0
+texture_margin_bottom = 24.0
+region_rect = Rect2(0, 0, 64, 64)
+
+[node name="Options" type="CanvasLayer"]
+process_mode = 3
+script = ExtResource("1_ciebq")
+
+[node name="Background" type="ColorRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.337255)
+
+[node name="TopPanel" type="Panel" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -139.0
+offset_top = -283.5
+offset_right = 139.0
+offset_bottom = -190.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_84kc0")
+
+[node name="GameOverLabel" type="Label" parent="TopPanel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -58.5
+offset_top = -31.5
+offset_right = 58.5
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "OPTIONS"
+label_settings = SubResource("LabelSettings_wgpwk")
+
+[node name="Panel2" type="Panel" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -226.0
+offset_top = -155.0
+offset_right = 227.0
+offset_bottom = 177.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_1bn1l")
+
+[node name="BGM" type="HSlider" parent="Panel2"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -184.0
+offset_top = -107.0
+offset_right = 116.0
+offset_bottom = 9.0
+grow_horizontal = 2
+grow_vertical = 2
+focus_neighbor_top = NodePath("../Return")
+focus_neighbor_bottom = NodePath("../SFX")
+theme_override_styles/grabber_area = SubResource("StyleBoxFlat_32wbx")
+theme_override_styles/grabber_area_highlight = SubResource("StyleBoxFlat_brrcr")
+value = 1.0
+rounded = true
+
+[node name="SFX" type="HSlider" parent="Panel2"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -184.0
+offset_top = -37.0
+offset_right = 116.0
+offset_bottom = 79.0
+grow_horizontal = 2
+grow_vertical = 2
+focus_neighbor_top = NodePath("../BGM")
+focus_neighbor_bottom = NodePath("../Return")
+theme_override_styles/grabber_area_highlight = SubResource("StyleBoxFlat_4r2dy")
+
+[node name="BGMVolume" type="Label" parent="Panel2"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 138.5
+offset_top = -63.0
+offset_right = 262.5
+offset_bottom = -20.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "50
+"
+label_settings = SubResource("LabelSettings_e6a82")
+
+[node name="SFXVolume" type="Label" parent="Panel2"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 138.5
+offset_top = 6.0
+offset_right = 262.5
+offset_bottom = 49.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "50
+"
+label_settings = SubResource("LabelSettings_r60sn")
+
+[node name="Volume" type="Label" parent="Panel2"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -33.5
+offset_top = -148.5
+offset_right = 33.5
+offset_bottom = -125.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "VOLUME"
+label_settings = SubResource("LabelSettings_kst4f")
+
+[node name="Label" type="Label" parent="Panel2"]
+layout_mode = 0
+offset_left = 43.0
+offset_top = 71.0
+offset_right = 83.0
+offset_bottom = 94.0
+text = "BGM:"
+label_settings = SubResource("LabelSettings_3fk6a")
+
+[node name="Label2" type="Label" parent="Panel2"]
+layout_mode = 0
+offset_left = 43.0
+offset_top = 145.0
+offset_right = 83.0
+offset_bottom = 173.0
+text = "SFX:"
+label_settings = SubResource("LabelSettings_3fk6a")
+
+[node name="Return" type="Button" parent="Panel2"]
+custom_minimum_size = Vector2(200, 55)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -100.0
+offset_top = 60.5
+offset_right = 100.0
+offset_bottom = 123.5
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+focus_neighbor_top = NodePath("../SFX")
+focus_neighbor_bottom = NodePath("../BGM")
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = SubResource("SystemFont_55nn6")
+theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = SubResource("StyleBoxTexture_nkg0s")
+theme_override_styles/hover = SubResource("StyleBoxTexture_6yopn")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_sl54e")
+theme_override_styles/focus = SubResource("StyleBoxTexture_vecyl")
+text = "RETURN"
+
+[connection signal="mouse_entered" from="Panel2/BGM" to="." method="_on_bgm_mouse_entered"]
+[connection signal="mouse_entered" from="Panel2/SFX" to="." method="_on_sfx_mouse_entered"]
+[connection signal="mouse_entered" from="Panel2/Return" to="." method="_on_return_mouse_entered"]
+[connection signal="pressed" from="Panel2/Return" to="." method="_on_return_pressed"]

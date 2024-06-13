@@ -1,0 +1,1441 @@
+[gd_scene load_steps=92 format=3 uid="uid://b1tpspeocc0a4"]
+
+[ext_resource type="Script" path="res://ui/hunters_lodge.gd" id="1_43nbn"]
+[ext_resource type="Texture2D" uid="uid://b6b68r0rviuxd" path="res://addons/Jungle Pack/Afternoon/Jungle_Afternoon_7.jpg" id="2_tuygu"]
+[ext_resource type="Texture2D" uid="uid://dq0kmissb7h5t" path="res://addons/Tiny Swords/UI/Ribbons/Ribbon_Red_Connection_Right.png" id="3_01e4p"]
+[ext_resource type="Texture2D" uid="uid://cm2pebd7hjgts" path="res://addons/Tiny Swords/UI/Ribbons/Ribbon_Red_3Slides.png" id="3_7828b"]
+[ext_resource type="Texture2D" uid="uid://bkgbuf2wkf04n" path="res://addons/Tiny Swords/UI/Ribbons/Ribbon_Red_Connection_Up.png" id="3_jgxiu"]
+[ext_resource type="Texture2D" uid="uid://baqx0ecgu5jpb" path="res://addons/Tiny Swords/UI/Banners/Banner_Horizontal.png" id="4_4d73o"]
+[ext_resource type="Texture2D" uid="uid://chc3qx3hgpae0" path="res://addons/Tiny Swords/UI/Buttons/Button_Blue.png" id="5_lxcew"]
+[ext_resource type="Texture2D" uid="uid://dq8frci2nfyr7" path="res://addons/Tiny Swords/UI/Buttons/Button_Hover.png" id="6_spe4h"]
+[ext_resource type="Texture2D" uid="uid://divxeb51qhg7b" path="res://addons/Tiny Swords/UI/Buttons/Button_Blue_Pressed.png" id="7_oa33w"]
+[ext_resource type="Texture2D" uid="uid://cbbm4yltrvgnn" path="res://addons/Tiny Swords/Resources/Resources/G_Idle_(NoShadow).png" id="8_s3cnk"]
+[ext_resource type="Texture2D" uid="uid://dxb2gvw703mif" path="res://addons/Tiny Swords/UI/Pointers/02.png" id="9_gggmx"]
+[ext_resource type="Texture2D" uid="uid://dhqji18yiy5w1" path="res://addons/Tiny Swords/Factions/Knights/Troops/Warrior/Blue/Warrior_Blue.png" id="9_pch4s"]
+[ext_resource type="Texture2D" uid="uid://5tc8oav48cvf" path="res://addons/Tiny Swords/Factions/Knights/Troops/Archer/Purple/Archer_Purlple.png" id="10_ecvsx"]
+[ext_resource type="Texture2D" uid="uid://tulflog2rm1" path="res://addons/Tiny Swords/Factions/Goblins/Troops/Torch/Yellow/Torch_Yellow.png" id="11_eo2by"]
+[ext_resource type="Texture2D" uid="uid://bhcitb55c2e81" path="res://addons/Tiny Swords/UI/Icons/locked.png" id="13_huf8g"]
+[ext_resource type="Texture2D" uid="uid://dnrltef4uaxr6" path="res://addons/Tiny Swords/UI/Pointers/04.png" id="14_6v1uk"]
+[ext_resource type="Texture2D" uid="uid://7fc3potrq31f" path="res://addons/Tiny Swords/UI/Icons/Pressed_01.png" id="15_s7ev4"]
+[ext_resource type="Texture2D" uid="uid://dfkgbn4sei6jw" path="res://addons/Shikashi's Fantasy Icons Pack v2/#1 - Transparent Icons.png" id="16_811nt"]
+[ext_resource type="Texture2D" uid="uid://oeaeohs7opj6" path="res://addons/stages/Captura de tela 2024-06-10 004257.png" id="16_lxt5m"]
+[ext_resource type="Texture2D" uid="uid://b13w7vvobkqab" path="res://addons/kenney_particle-pack/PNG (Transparent)/magic_02.png" id="17_elyas"]
+[ext_resource type="Texture2D" uid="uid://bdlng3hoou75p" path="res://addons/kenney_particle-pack/PNG (Transparent)/slash_01.png" id="17_qwqw4"]
+[ext_resource type="Texture2D" uid="uid://c0pxp8mpqjh7m" path="res://addons/Shikashi's Fantasy Icons Pack v2/#2 - Transparent Icons & Drop Shadow.png" id="19_ll40g"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ai64d"]
+texture = ExtResource("2_tuygu")
+modulate_color = Color(0.762404, 0.762404, 0.762404, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_62op6"]
+texture = ExtResource("3_01e4p")
+texture_margin_left = 24.0
+texture_margin_top = 8.0
+texture_margin_right = 16.0
+texture_margin_bottom = 24.0
+
+[sub_resource type="SystemFont" id="SystemFont_4ls4r"]
+font_names = PackedStringArray("Impact")
+subpixel_positioning = 0
+
+[sub_resource type="LabelSettings" id="LabelSettings_r6lf7"]
+font = SubResource("SystemFont_4ls4r")
+font_size = 26
+outline_size = 6
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xppsg"]
+texture = ExtResource("3_jgxiu")
+texture_margin_left = 16.0
+texture_margin_top = 16.0
+texture_margin_right = 16.0
+texture_margin_bottom = 16.0
+
+[sub_resource type="SystemFont" id="SystemFont_7a856"]
+font_names = PackedStringArray("Impact")
+subpixel_positioning = 0
+
+[sub_resource type="LabelSettings" id="LabelSettings_wkrfg"]
+font = SubResource("SystemFont_7a856")
+font_size = 26
+outline_size = 6
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_so6cv"]
+texture = ExtResource("4_4d73o")
+texture_margin_left = 24.0
+texture_margin_top = 8.0
+texture_margin_right = 24.0
+texture_margin_bottom = 40.0
+region_rect = Rect2(32, 48, 128, 128)
+
+[sub_resource type="SystemFont" id="SystemFont_fronj"]
+font_names = PackedStringArray("Impact")
+subpixel_positioning = 0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0btus"]
+texture = ExtResource("5_lxcew")
+texture_margin_left = 16.0
+texture_margin_top = 8.0
+texture_margin_right = 16.0
+texture_margin_bottom = 24.0
+modulate_color = Color(0.552758, 0.706428, 0.739645, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_wjewj"]
+texture = ExtResource("6_spe4h")
+texture_margin_left = 16.0
+texture_margin_top = 8.0
+texture_margin_right = 16.0
+texture_margin_bottom = 24.0
+region_rect = Rect2(0, 0, 64, 64)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_lfedp"]
+texture = ExtResource("7_oa33w")
+texture_margin_left = 16.0
+texture_margin_top = 16.0
+texture_margin_right = 16.0
+texture_margin_bottom = 24.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_q2od7"]
+texture = ExtResource("6_spe4h")
+texture_margin_left = 16.0
+texture_margin_top = 8.0
+texture_margin_right = 16.0
+texture_margin_bottom = 24.0
+region_rect = Rect2(0, 0, 64, 64)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2xw1j"]
+texture = ExtResource("9_gggmx")
+region_rect = Rect2(0, 0, 64, 64)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_4o5ri"]
+texture = ExtResource("9_pch4s")
+region_rect = Rect2(408, 616, 104, 104)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ac12s"]
+texture = ExtResource("14_6v1uk")
+region_rect = Rect2(-24, 16, 72, 72)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_upq72"]
+texture = ExtResource("10_ecvsx")
+region_rect = Rect2(624, 824, 96, 88)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_se2nv"]
+texture = ExtResource("14_6v1uk")
+region_rect = Rect2(-24, 16, 72, 72)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ld46x"]
+texture = ExtResource("13_huf8g")
+modulate_color = Color(0.211765, 0.239216, 0.290196, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_1rrhs"]
+texture = ExtResource("11_eo2by")
+region_rect = Rect2(816, 48, 88, 88)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_oyhyw"]
+texture = ExtResource("14_6v1uk")
+region_rect = Rect2(-24, 16, 72, 72)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_cr2om"]
+texture = ExtResource("13_huf8g")
+modulate_color = Color(0.211765, 0.239216, 0.290196, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_1kyd7"]
+texture = ExtResource("15_s7ev4")
+region_rect = Rect2(0, -8, 64, 72)
+modulate_color = Color(0.211765, 0.239216, 0.290196, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_k5y7t"]
+texture = ExtResource("9_gggmx")
+region_rect = Rect2(-140, -104, 84, 44)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_vrg3r"]
+texture = ExtResource("9_gggmx")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_jytpk"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_nhxap"]
+texture = ExtResource("9_gggmx")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_j6t06"]
+texture = ExtResource("9_gggmx")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2407c"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_lq7te"]
+texture = ExtResource("9_gggmx")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_qljwn"]
+texture = ExtResource("9_gggmx")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_eqjy8"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ekj3m"]
+texture = ExtResource("9_gggmx")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0ncyg"]
+texture = ExtResource("9_gggmx")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8svvp"]
+texture = ExtResource("16_lxt5m")
+region_rect = Rect2(72, 0, 496, 354)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_wxhxu"]
+texture = ExtResource("15_s7ev4")
+region_rect = Rect2(0, -8, 64, 72)
+modulate_color = Color(0.211765, 0.239216, 0.290196, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_6ajm4"]
+texture = ExtResource("15_s7ev4")
+region_rect = Rect2(0, -8, 64, 72)
+modulate_color = Color(0.211765, 0.239216, 0.290196, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_a1tmd"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ryf7c"]
+texture = ExtResource("9_gggmx")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_kw0uf"]
+texture = ExtResource("9_gggmx")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_56onc"]
+texture = ExtResource("16_811nt")
+region_rect = Rect2(32, 160, 32, 32)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xuvwl"]
+texture = ExtResource("16_811nt")
+region_rect = Rect2(160, 96, 32, 32)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_lnmxk"]
+texture = ExtResource("16_811nt")
+region_rect = Rect2(224, 224, 32, 32)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_q50rs"]
+texture = ExtResource("16_811nt")
+region_rect = Rect2(64, 256, 36, 32)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_myaid"]
+texture = ExtResource("16_811nt")
+region_rect = Rect2(224, 192, 32, 32)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_wysdv"]
+texture = ExtResource("17_elyas")
+modulate_color = Color(100, 100, 100, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_jg1rv"]
+texture = ExtResource("13_huf8g")
+modulate_color = Color(0.211765, 0.239216, 0.290196, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_qjeso"]
+texture = ExtResource("17_qwqw4")
+region_rect = Rect2(32, 112, 448, 432)
+modulate_color = Color(0.99492, 0.426297, 0.310962, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_24y7c"]
+texture = ExtResource("16_811nt")
+region_rect = Rect2(224, 96, 32, 32)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_n27rf"]
+texture = ExtResource("13_huf8g")
+modulate_color = Color(0.211765, 0.239216, 0.290196, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_6vh4w"]
+texture = ExtResource("19_ll40g")
+region_rect = Rect2(384, 96, 32, 32)
+modulate_color = Color(1, 0.690196, 0.980392, 0.847059)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_und2e"]
+texture = ExtResource("13_huf8g")
+modulate_color = Color(0.211765, 0.239216, 0.290196, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_r0l1p"]
+texture = ExtResource("19_ll40g")
+region_rect = Rect2(60, 192, 40, 36)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ivcju"]
+texture = ExtResource("13_huf8g")
+modulate_color = Color(0.211765, 0.239216, 0.290196, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_t8hb5"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_rq0j3"]
+texture = ExtResource("9_gggmx")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_uhfoq"]
+texture = ExtResource("9_gggmx")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1iemv"]
+bg_color = Color(0, 0, 0, 0.768627)
+
+[sub_resource type="SystemFont" id="SystemFont_yj3rb"]
+font_names = PackedStringArray("Impact")
+subpixel_positioning = 0
+
+[sub_resource type="LabelSettings" id="LabelSettings_ecdaf"]
+font = SubResource("SystemFont_yj3rb")
+font_size = 22
+outline_size = 4
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="SystemFont" id="SystemFont_jpvsw"]
+font_names = PackedStringArray("Impact")
+subpixel_positioning = 0
+
+[sub_resource type="LabelSettings" id="LabelSettings_mbgeo"]
+font = SubResource("SystemFont_jpvsw")
+font_size = 20
+outline_size = 4
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_nnai0"]
+texture = ExtResource("3_7828b")
+texture_margin_left = 64.0
+texture_margin_right = 64.0
+axis_stretch_horizontal = 2
+
+[sub_resource type="SystemFont" id="SystemFont_1q8w7"]
+font_names = PackedStringArray("Impact")
+subpixel_positioning = 0
+
+[sub_resource type="LabelSettings" id="LabelSettings_jqioi"]
+line_spacing = 20.0
+font = SubResource("SystemFont_1q8w7")
+font_size = 34
+outline_size = 9
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_jjpvg"]
+texture = ExtResource("4_4d73o")
+texture_margin_left = 32.0
+texture_margin_top = 32.0
+texture_margin_right = 32.0
+texture_margin_bottom = 48.0
+axis_stretch_horizontal = 2
+axis_stretch_vertical = 2
+region_rect = Rect2(32, 40, 128, 136)
+
+[sub_resource type="SystemFont" id="SystemFont_sa1ks"]
+font_names = PackedStringArray("Impact")
+subpixel_positioning = 0
+
+[sub_resource type="LabelSettings" id="LabelSettings_nqbjx"]
+font = SubResource("SystemFont_sa1ks")
+font_size = 24
+font_color = Color(0, 0, 0, 1)
+shadow_size = 0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dwhm5"]
+atlas = ExtResource("8_s3cnk")
+region = Rect2(40, 48, 56, 56)
+
+[node name="HuntersLodge" type="CanvasLayer"]
+script = ExtResource("1_43nbn")
+
+[node name="Background" type="Panel" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_ai64d")
+
+[node name="TitlePlayer" type="Panel" parent="."]
+offset_left = 283.0
+offset_top = 51.0
+offset_right = 412.0
+offset_bottom = 203.0
+rotation = 1.5708
+theme_override_styles/panel = SubResource("StyleBoxTexture_62op6")
+
+[node name="Label" type="Label" parent="TitlePlayer"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -42.4998
+offset_top = 33.5
+offset_right = 30.5002
+offset_bottom = 66.5
+grow_horizontal = 2
+grow_vertical = 2
+rotation = -1.5708
+text = "PLAYER"
+label_settings = SubResource("LabelSettings_r6lf7")
+horizontal_alignment = 1
+
+[node name="TitleStage" type="Panel" parent="."]
+offset_left = 1035.0
+offset_top = 280.0
+offset_right = 1151.0
+offset_bottom = 370.0
+rotation = 4.71239
+theme_override_styles/panel = SubResource("StyleBoxTexture_xppsg")
+
+[node name="Label" type="Label" parent="TitleStage"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 53.5
+offset_top = 28.0
+offset_right = 164.5
+offset_bottom = 61.0
+grow_horizontal = 2
+grow_vertical = 2
+rotation = 3.14159
+text = "STAGE"
+label_settings = SubResource("LabelSettings_wkrfg")
+horizontal_alignment = 1
+
+[node name="TitleSkills" type="Panel" parent="."]
+offset_left = 121.0
+offset_top = 430.0
+offset_right = 237.0
+offset_bottom = 520.0
+rotation = 1.5708
+theme_override_styles/panel = SubResource("StyleBoxTexture_xppsg")
+
+[node name="Label" type="Label" parent="TitleSkills"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 56.5
+offset_top = 28.0
+offset_right = 167.5
+offset_bottom = 61.0
+grow_horizontal = 2
+grow_vertical = 2
+rotation = 3.14159
+text = "SKILLS"
+label_settings = SubResource("LabelSettings_wkrfg")
+horizontal_alignment = 1
+
+[node name="Main" type="Panel" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -492.0
+offset_top = -211.0
+offset_right = 493.0
+offset_bottom = 292.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_so6cv")
+
+[node name="Hunt" type="Button" parent="Main"]
+custom_minimum_size = Vector2(200, 55)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 49.0
+offset_top = 143.5
+offset_right = 249.0
+offset_bottom = 206.5
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+focus_neighbor_left = NodePath("../ContainerSkills/SButton10")
+focus_neighbor_top = NodePath("../ContainerStage/StButton6")
+focus_neighbor_right = NodePath("../Return")
+focus_neighbor_bottom = NodePath("../ContainerStage/StButton")
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = SubResource("SystemFont_fronj")
+theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = SubResource("StyleBoxTexture_0btus")
+theme_override_styles/hover = SubResource("StyleBoxTexture_wjewj")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_lfedp")
+theme_override_styles/focus = SubResource("StyleBoxTexture_q2od7")
+text = "HUNT"
+
+[node name="Return" type="Button" parent="Main"]
+custom_minimum_size = Vector2(200, 55)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 248.0
+offset_top = 143.5
+offset_right = 448.0
+offset_bottom = 206.5
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+focus_neighbor_left = NodePath("../Hunt")
+focus_neighbor_top = NodePath("../ContainerStage/StButton9")
+focus_neighbor_right = NodePath("../ContainerSkills/SButton6")
+focus_neighbor_bottom = NodePath("../ContainerStage/StButton4")
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = SubResource("SystemFont_fronj")
+theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = SubResource("StyleBoxTexture_0btus")
+theme_override_styles/hover = SubResource("StyleBoxTexture_wjewj")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_lfedp")
+theme_override_styles/focus = SubResource("StyleBoxTexture_q2od7")
+text = "RETURN"
+
+[node name="ContainerPlayer2" type="GridContainer" parent="Main"]
+layout_mode = 0
+offset_left = 37.0
+offset_top = 21.0
+offset_right = 213.0
+offset_bottom = 278.0
+columns = 2
+
+[node name="Button" type="Button" parent="Main/ContainerPlayer2"]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+theme_override_styles/hover = SubResource("StyleBoxTexture_2xw1j")
+
+[node name="Panel" type="Panel" parent="Main/ContainerPlayer2/Button"]
+layout_mode = 0
+offset_right = 80.0
+offset_bottom = 80.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_4o5ri")
+
+[node name="Chose" type="Panel" parent="Main/ContainerPlayer2/Button"]
+layout_mode = 0
+offset_right = 80.0
+offset_bottom = 80.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_ac12s")
+
+[node name="Button2" type="Button" parent="Main/ContainerPlayer2"]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+
+[node name="Panel" type="Panel" parent="Main/ContainerPlayer2/Button2"]
+layout_mode = 0
+offset_right = 80.0
+offset_bottom = 80.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_upq72")
+
+[node name="Chose" type="Panel" parent="Main/ContainerPlayer2/Button2"]
+visible = false
+layout_mode = 0
+offset_right = 80.0
+offset_bottom = 80.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_se2nv")
+
+[node name="Panel2" type="Panel" parent="Main/ContainerPlayer2/Button2"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_ld46x")
+
+[node name="Button3" type="Button" parent="Main/ContainerPlayer2"]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+
+[node name="hunter" type="Panel" parent="Main/ContainerPlayer2/Button3"]
+layout_mode = 0
+offset_right = 80.0
+offset_bottom = 80.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_1rrhs")
+
+[node name="Chose" type="Panel" parent="Main/ContainerPlayer2/Button3"]
+visible = false
+layout_mode = 0
+offset_right = 80.0
+offset_bottom = 80.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_oyhyw")
+
+[node name="Panel2" type="Panel" parent="Main/ContainerPlayer2/Button3"]
+layout_mode = 0
+offset_right = 80.0
+offset_bottom = 80.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_cr2om")
+
+[node name="Button4" type="Button" parent="Main/ContainerPlayer2"]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+
+[node name="Panel" type="Panel" parent="Main/ContainerPlayer2/Button4"]
+layout_mode = 0
+offset_right = 80.0
+offset_bottom = 80.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_1kyd7")
+
+[node name="Button5" type="Button" parent="Main/ContainerPlayer2"]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+
+[node name="Panel" type="Panel" parent="Main/ContainerPlayer2/Button5"]
+layout_mode = 0
+offset_right = 80.0
+offset_bottom = 80.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_1kyd7")
+
+[node name="Button6" type="Button" parent="Main/ContainerPlayer2"]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+
+[node name="Panel" type="Panel" parent="Main/ContainerPlayer2/Button6"]
+layout_mode = 0
+offset_right = 80.0
+offset_bottom = 80.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_1kyd7")
+
+[node name="ContainerPlayer" type="GridContainer" parent="Main"]
+layout_mode = 0
+offset_left = 37.0
+offset_top = 21.0
+offset_right = 213.0
+offset_bottom = 278.0
+columns = 2
+
+[node name="PButton" type="Button" parent="Main/ContainerPlayer"]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+focus_neighbor_left = NodePath("../../ContainerStage/StButton5")
+focus_neighbor_top = NodePath("../../ContainerSkills/SButton6")
+focus_neighbor_right = NodePath("../PButton2")
+focus_neighbor_bottom = NodePath("../PButton3")
+theme_override_styles/normal = SubResource("StyleBoxTexture_k5y7t")
+theme_override_styles/hover = SubResource("StyleBoxTexture_2xw1j")
+theme_override_styles/focus = SubResource("StyleBoxTexture_vrg3r")
+
+[node name="PButton2" type="Button" parent="Main/ContainerPlayer"]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+focus_neighbor_left = NodePath("../PButton")
+focus_neighbor_top = NodePath("../../ContainerSkills/SButton7")
+focus_neighbor_right = NodePath("../../ContainerStage/StButton")
+focus_neighbor_bottom = NodePath("../PButton4")
+theme_override_styles/normal = SubResource("StyleBoxTexture_jytpk")
+theme_override_styles/hover = SubResource("StyleBoxTexture_nhxap")
+theme_override_styles/focus = SubResource("StyleBoxTexture_j6t06")
+
+[node name="PButton3" type="Button" parent="Main/ContainerPlayer"]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+focus_neighbor_left = NodePath("../../ContainerStage/StButton10")
+focus_neighbor_top = NodePath("../PButton")
+focus_neighbor_right = NodePath("../PButton4")
+focus_neighbor_bottom = NodePath("../PButton5")
+theme_override_styles/normal = SubResource("StyleBoxTexture_2407c")
+theme_override_styles/hover = SubResource("StyleBoxTexture_lq7te")
+theme_override_styles/focus = SubResource("StyleBoxTexture_qljwn")
+
+[node name="PButton4" type="Button" parent="Main/ContainerPlayer"]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+focus_neighbor_left = NodePath("../PButton3")
+focus_neighbor_top = NodePath("../PButton2")
+focus_neighbor_right = NodePath("../../ContainerStage/StButton6")
+focus_neighbor_bottom = NodePath("../PButton6")
+theme_override_styles/normal = SubResource("StyleBoxTexture_eqjy8")
+theme_override_styles/hover = SubResource("StyleBoxTexture_ekj3m")
+theme_override_styles/focus = SubResource("StyleBoxTexture_0ncyg")
+
+[node name="PButton5" type="Button" parent="Main/ContainerPlayer"]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+focus_neighbor_left = NodePath("../PButton6")
+focus_neighbor_top = NodePath("../PButton3")
+focus_neighbor_right = NodePath("../PButton6")
+focus_neighbor_bottom = NodePath("../../ContainerSkills/SButton")
+theme_override_styles/normal = SubResource("StyleBoxTexture_eqjy8")
+theme_override_styles/hover = SubResource("StyleBoxTexture_ekj3m")
+theme_override_styles/focus = SubResource("StyleBoxTexture_0ncyg")
+
+[node name="PButton6" type="Button" parent="Main/ContainerPlayer"]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+focus_neighbor_left = NodePath("../PButton5")
+focus_neighbor_top = NodePath("../PButton4")
+focus_neighbor_right = NodePath("../PButton5")
+focus_neighbor_bottom = NodePath("../../ContainerSkills/SButton2")
+theme_override_styles/normal = SubResource("StyleBoxTexture_eqjy8")
+theme_override_styles/hover = SubResource("StyleBoxTexture_ekj3m")
+theme_override_styles/focus = SubResource("StyleBoxTexture_0ncyg")
+
+[node name="ContainerStage2" type="GridContainer" parent="Main"]
+layout_mode = 0
+offset_left = 533.0
+offset_top = 21.0
+offset_right = 949.0
+offset_bottom = 189.0
+columns = 5
+
+[node name="Button" type="Button" parent="Main/ContainerStage2"]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+
+[node name="Panel" type="Panel" parent="Main/ContainerStage2/Button"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_8svvp")
+
+[node name="Chose" type="Panel" parent="Main/ContainerStage2/Button"]
+layout_mode = 0
+offset_right = 80.0
+offset_bottom = 80.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_ac12s")
+
+[node name="Button2" type="Button" parent="Main/ContainerStage2"]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+
+[node name="Panel2" type="Panel" parent="Main/ContainerStage2/Button2"]
+layout_mode = 0
+offset_right = 80.0
+offset_bottom = 84.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_wxhxu")
+
+[node name="Button3" type="Button" parent="Main/ContainerStage2"]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+
+[node name="Panel" type="Panel" parent="Main/ContainerStage2/Button3"]
+layout_mode = 0
+offset_right = 80.0
+offset_bottom = 80.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_6ajm4")
+
+[node name="Button4" type="Button" parent="Main/ContainerStage2"]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+
+[node name="Panel" type="Panel" parent="Main/ContainerStage2/Button4"]
+layout_mode = 0
+offset_right = 80.0
+offset_bottom = 80.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_6ajm4")
+
+[node name="Button5" type="Button" parent="Main/ContainerStage2"]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+
+[node name="Panel" type="Panel" parent="Main/ContainerStage2/Button5"]
+layout_mode = 0
+offset_right = 80.0
+offset_bottom = 80.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_6ajm4")
+
+[node name="Button6" type="Button" parent="Main/ContainerStage2"]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+
+[node name="Panel" type="Panel" parent="Main/ContainerStage2/Button6"]
+layout_mode = 0
+offset_right = 80.0
+offset_bottom = 80.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_6ajm4")
+
+[node name="Button7" type="Button" parent="Main/ContainerStage2"]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+
+[node name="Panel" type="Panel" parent="Main/ContainerStage2/Button7"]
+layout_mode = 0
+offset_right = 80.0
+offset_bottom = 80.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_6ajm4")
+
+[node name="Button8" type="Button" parent="Main/ContainerStage2"]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+
+[node name="Panel" type="Panel" parent="Main/ContainerStage2/Button8"]
+layout_mode = 0
+offset_right = 80.0
+offset_bottom = 80.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_6ajm4")
+
+[node name="Button9" type="Button" parent="Main/ContainerStage2"]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+
+[node name="Panel" type="Panel" parent="Main/ContainerStage2/Button9"]
+layout_mode = 0
+offset_right = 80.0
+offset_bottom = 80.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_6ajm4")
+
+[node name="Button10" type="Button" parent="Main/ContainerStage2"]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+
+[node name="Panel" type="Panel" parent="Main/ContainerStage2/Button10"]
+layout_mode = 0
+offset_right = 80.0
+offset_bottom = 80.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_6ajm4")
+
+[node name="ContainerStage" type="GridContainer" parent="Main"]
+layout_mode = 0
+offset_left = 533.0
+offset_top = 21.0
+offset_right = 949.0
+offset_bottom = 189.0
+columns = 5
+
+[node name="StButton" type="Button" parent="Main/ContainerStage"]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+focus_neighbor_left = NodePath("../../ContainerPlayer/PButton2")
+focus_neighbor_top = NodePath("../../Hunt")
+focus_neighbor_right = NodePath("../StButton2")
+focus_neighbor_bottom = NodePath("../StButton6")
+theme_override_styles/normal = SubResource("StyleBoxTexture_a1tmd")
+theme_override_styles/hover = SubResource("StyleBoxTexture_ryf7c")
+theme_override_styles/focus = SubResource("StyleBoxTexture_kw0uf")
+
+[node name="StButton2" type="Button" parent="Main/ContainerStage"]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+focus_neighbor_left = NodePath("../StButton")
+focus_neighbor_top = NodePath("../../Hunt")
+focus_neighbor_right = NodePath("../StButton3")
+focus_neighbor_bottom = NodePath("../StButton7")
+theme_override_styles/normal = SubResource("StyleBoxTexture_a1tmd")
+theme_override_styles/hover = SubResource("StyleBoxTexture_ryf7c")
+theme_override_styles/focus = SubResource("StyleBoxTexture_kw0uf")
+
+[node name="StButton3" type="Button" parent="Main/ContainerStage"]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+focus_neighbor_left = NodePath("../StButton2")
+focus_neighbor_top = NodePath("../../Return")
+focus_neighbor_right = NodePath("../StButton4")
+focus_neighbor_bottom = NodePath("../StButton8")
+theme_override_styles/normal = SubResource("StyleBoxTexture_a1tmd")
+theme_override_styles/hover = SubResource("StyleBoxTexture_ryf7c")
+theme_override_styles/focus = SubResource("StyleBoxTexture_kw0uf")
+
+[node name="StButton4" type="Button" parent="Main/ContainerStage"]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+focus_neighbor_left = NodePath("../StButton3")
+focus_neighbor_top = NodePath("../../Return")
+focus_neighbor_right = NodePath("../StButton5")
+focus_neighbor_bottom = NodePath("../StButton9")
+theme_override_styles/normal = SubResource("StyleBoxTexture_a1tmd")
+theme_override_styles/hover = SubResource("StyleBoxTexture_ryf7c")
+theme_override_styles/focus = SubResource("StyleBoxTexture_kw0uf")
+
+[node name="StButton5" type="Button" parent="Main/ContainerStage"]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+focus_neighbor_left = NodePath("../StButton4")
+focus_neighbor_top = NodePath("../../Return")
+focus_neighbor_right = NodePath("../../ContainerPlayer/PButton")
+focus_neighbor_bottom = NodePath("../StButton10")
+theme_override_styles/normal = SubResource("StyleBoxTexture_a1tmd")
+theme_override_styles/hover = SubResource("StyleBoxTexture_ryf7c")
+theme_override_styles/focus = SubResource("StyleBoxTexture_kw0uf")
+
+[node name="StButton6" type="Button" parent="Main/ContainerStage"]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+focus_neighbor_left = NodePath("../../ContainerPlayer/PButton4")
+focus_neighbor_top = NodePath("../StButton")
+focus_neighbor_right = NodePath("../StButton7")
+focus_neighbor_bottom = NodePath("../../Hunt")
+theme_override_styles/normal = SubResource("StyleBoxTexture_a1tmd")
+theme_override_styles/hover = SubResource("StyleBoxTexture_ryf7c")
+theme_override_styles/focus = SubResource("StyleBoxTexture_kw0uf")
+
+[node name="StButton7" type="Button" parent="Main/ContainerStage"]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+focus_neighbor_left = NodePath("../StButton6")
+focus_neighbor_top = NodePath("../StButton2")
+focus_neighbor_right = NodePath("../StButton8")
+focus_neighbor_bottom = NodePath("../../Hunt")
+theme_override_styles/normal = SubResource("StyleBoxTexture_a1tmd")
+theme_override_styles/hover = SubResource("StyleBoxTexture_ryf7c")
+theme_override_styles/focus = SubResource("StyleBoxTexture_kw0uf")
+
+[node name="StButton8" type="Button" parent="Main/ContainerStage"]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+focus_neighbor_left = NodePath("../StButton7")
+focus_neighbor_top = NodePath("../StButton3")
+focus_neighbor_right = NodePath("../StButton9")
+focus_neighbor_bottom = NodePath("../../Return")
+theme_override_styles/normal = SubResource("StyleBoxTexture_a1tmd")
+theme_override_styles/hover = SubResource("StyleBoxTexture_ryf7c")
+theme_override_styles/focus = SubResource("StyleBoxTexture_kw0uf")
+
+[node name="StButton9" type="Button" parent="Main/ContainerStage"]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+focus_neighbor_left = NodePath("../StButton8")
+focus_neighbor_top = NodePath("../StButton4")
+focus_neighbor_right = NodePath("../StButton10")
+focus_neighbor_bottom = NodePath("../../Return")
+theme_override_styles/normal = SubResource("StyleBoxTexture_a1tmd")
+theme_override_styles/hover = SubResource("StyleBoxTexture_ryf7c")
+theme_override_styles/focus = SubResource("StyleBoxTexture_kw0uf")
+
+[node name="StButton10" type="Button" parent="Main/ContainerStage"]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+focus_neighbor_left = NodePath("../StButton9")
+focus_neighbor_top = NodePath("../StButton5")
+focus_neighbor_right = NodePath("../../ContainerPlayer/PButton3")
+focus_neighbor_bottom = NodePath("../../Return")
+theme_override_styles/normal = SubResource("StyleBoxTexture_a1tmd")
+theme_override_styles/hover = SubResource("StyleBoxTexture_ryf7c")
+theme_override_styles/focus = SubResource("StyleBoxTexture_kw0uf")
+
+[node name="ContainerSkills2" type="GridContainer" parent="Main"]
+layout_mode = 0
+offset_left = 37.0
+offset_top = 284.0
+offset_right = 453.0
+offset_bottom = 541.0
+columns = 5
+
+[node name="Button" type="Button" parent="Main/ContainerSkills2"]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+
+[node name="Panel" type="Panel" parent="Main/ContainerSkills2/Button"]
+layout_mode = 0
+offset_right = 80.0
+offset_bottom = 80.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_56onc")
+
+[node name="Button2" type="Button" parent="Main/ContainerSkills2"]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+
+[node name="Panel" type="Panel" parent="Main/ContainerSkills2/Button2"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_xuvwl")
+
+[node name="Button3" type="Button" parent="Main/ContainerSkills2"]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+
+[node name="Panel" type="Panel" parent="Main/ContainerSkills2/Button3"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_lnmxk")
+
+[node name="Button4" type="Button" parent="Main/ContainerSkills2"]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+
+[node name="Panel" type="Panel" parent="Main/ContainerSkills2/Button4"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_q50rs")
+
+[node name="Button5" type="Button" parent="Main/ContainerSkills2"]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+
+[node name="Panel" type="Panel" parent="Main/ContainerSkills2/Button5"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_myaid")
+
+[node name="Button6" type="Button" parent="Main/ContainerSkills2"]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+
+[node name="Panel" type="Panel" parent="Main/ContainerSkills2/Button6"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_wysdv")
+
+[node name="Panel2" type="Panel" parent="Main/ContainerSkills2/Button6"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_jg1rv")
+
+[node name="Button7" type="Button" parent="Main/ContainerSkills2"]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+
+[node name="Panel" type="Panel" parent="Main/ContainerSkills2/Button7"]
+layout_mode = 0
+offset_right = 80.0
+offset_bottom = 80.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_qjeso")
+
+[node name="Panel2" type="Panel" parent="Main/ContainerSkills2/Button7"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_jg1rv")
+
+[node name="Button8" type="Button" parent="Main/ContainerSkills2"]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+
+[node name="Panel" type="Panel" parent="Main/ContainerSkills2/Button8"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_24y7c")
+
+[node name="Panel2" type="Panel" parent="Main/ContainerSkills2/Button8"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_n27rf")
+
+[node name="Button9" type="Button" parent="Main/ContainerSkills2"]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+
+[node name="Panel" type="Panel" parent="Main/ContainerSkills2/Button9"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_6vh4w")
+
+[node name="Panel2" type="Panel" parent="Main/ContainerSkills2/Button9"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_und2e")
+
+[node name="Button10" type="Button" parent="Main/ContainerSkills2"]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+
+[node name="Panel" type="Panel" parent="Main/ContainerSkills2/Button10"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_r0l1p")
+
+[node name="Panel2" type="Panel" parent="Main/ContainerSkills2/Button10"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_ivcju")
+
+[node name="ContainerSkills" type="GridContainer" parent="Main"]
+layout_mode = 0
+offset_left = 37.0
+offset_top = 284.0
+offset_right = 453.0
+offset_bottom = 541.0
+columns = 5
+
+[node name="SButton" type="Button" parent="Main/ContainerSkills"]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+focus_neighbor_left = NodePath("../SButton5")
+focus_neighbor_top = NodePath("../../ContainerPlayer/PButton5")
+focus_neighbor_right = NodePath("../SButton2")
+focus_neighbor_bottom = NodePath("../SButton6")
+theme_override_styles/normal = SubResource("StyleBoxTexture_t8hb5")
+theme_override_styles/hover = SubResource("StyleBoxTexture_rq0j3")
+theme_override_styles/focus = SubResource("StyleBoxTexture_uhfoq")
+
+[node name="SButton2" type="Button" parent="Main/ContainerSkills"]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+focus_neighbor_left = NodePath("../SButton")
+focus_neighbor_top = NodePath("../../ContainerPlayer/PButton6")
+focus_neighbor_right = NodePath("../SButton3")
+focus_neighbor_bottom = NodePath("../SButton7")
+theme_override_styles/normal = SubResource("StyleBoxTexture_t8hb5")
+theme_override_styles/hover = SubResource("StyleBoxTexture_rq0j3")
+theme_override_styles/focus = SubResource("StyleBoxTexture_uhfoq")
+
+[node name="SButton3" type="Button" parent="Main/ContainerSkills"]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+focus_neighbor_left = NodePath("../SButton2")
+focus_neighbor_top = NodePath("../SButton8")
+focus_neighbor_right = NodePath("../SButton4")
+focus_neighbor_bottom = NodePath("../SButton8")
+theme_override_styles/normal = SubResource("StyleBoxTexture_t8hb5")
+theme_override_styles/hover = SubResource("StyleBoxTexture_rq0j3")
+theme_override_styles/focus = SubResource("StyleBoxTexture_uhfoq")
+
+[node name="SButton4" type="Button" parent="Main/ContainerSkills"]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+focus_neighbor_left = NodePath("../SButton3")
+focus_neighbor_top = NodePath("../SButton9")
+focus_neighbor_right = NodePath("../SButton5")
+focus_neighbor_bottom = NodePath("../SButton9")
+theme_override_styles/normal = SubResource("StyleBoxTexture_t8hb5")
+theme_override_styles/hover = SubResource("StyleBoxTexture_rq0j3")
+theme_override_styles/focus = SubResource("StyleBoxTexture_uhfoq")
+
+[node name="SButton5" type="Button" parent="Main/ContainerSkills"]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+focus_neighbor_left = NodePath("../SButton4")
+focus_neighbor_top = NodePath("../SButton10")
+focus_neighbor_right = NodePath("../SButton")
+focus_neighbor_bottom = NodePath("../SButton10")
+theme_override_styles/normal = SubResource("StyleBoxTexture_t8hb5")
+theme_override_styles/hover = SubResource("StyleBoxTexture_rq0j3")
+theme_override_styles/focus = SubResource("StyleBoxTexture_uhfoq")
+
+[node name="SButton6" type="Button" parent="Main/ContainerSkills"]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+focus_neighbor_left = NodePath("../../Return")
+focus_neighbor_top = NodePath("../SButton")
+focus_neighbor_right = NodePath("../SButton7")
+focus_neighbor_bottom = NodePath("../../ContainerPlayer/PButton")
+theme_override_styles/normal = SubResource("StyleBoxTexture_t8hb5")
+theme_override_styles/hover = SubResource("StyleBoxTexture_rq0j3")
+theme_override_styles/focus = SubResource("StyleBoxTexture_uhfoq")
+
+[node name="SButton7" type="Button" parent="Main/ContainerSkills"]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+focus_neighbor_left = NodePath("../SButton6")
+focus_neighbor_top = NodePath("../SButton2")
+focus_neighbor_right = NodePath("../SButton8")
+focus_neighbor_bottom = NodePath("../../ContainerPlayer/PButton2")
+theme_override_styles/normal = SubResource("StyleBoxTexture_t8hb5")
+theme_override_styles/hover = SubResource("StyleBoxTexture_rq0j3")
+theme_override_styles/focus = SubResource("StyleBoxTexture_uhfoq")
+
+[node name="SButton8" type="Button" parent="Main/ContainerSkills"]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+focus_neighbor_left = NodePath("../SButton7")
+focus_neighbor_top = NodePath("../SButton3")
+focus_neighbor_right = NodePath("../SButton9")
+focus_neighbor_bottom = NodePath("../SButton3")
+theme_override_styles/normal = SubResource("StyleBoxTexture_t8hb5")
+theme_override_styles/hover = SubResource("StyleBoxTexture_rq0j3")
+theme_override_styles/focus = SubResource("StyleBoxTexture_uhfoq")
+
+[node name="SButton9" type="Button" parent="Main/ContainerSkills"]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+focus_neighbor_left = NodePath("../SButton8")
+focus_neighbor_top = NodePath("../SButton4")
+focus_neighbor_right = NodePath("../SButton10")
+focus_neighbor_bottom = NodePath("../SButton4")
+theme_override_styles/normal = SubResource("StyleBoxTexture_t8hb5")
+theme_override_styles/hover = SubResource("StyleBoxTexture_rq0j3")
+theme_override_styles/focus = SubResource("StyleBoxTexture_uhfoq")
+
+[node name="SButton10" type="Button" parent="Main/ContainerSkills"]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+focus_neighbor_left = NodePath("../SButton9")
+focus_neighbor_top = NodePath("../SButton5")
+focus_neighbor_right = NodePath("../../Hunt")
+focus_neighbor_bottom = NodePath("../SButton5")
+theme_override_styles/normal = SubResource("StyleBoxTexture_t8hb5")
+theme_override_styles/hover = SubResource("StyleBoxTexture_rq0j3")
+theme_override_styles/focus = SubResource("StyleBoxTexture_uhfoq")
+
+[node name="Separator" type="Panel" parent="Main"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 0.5
+offset_top = -230.5
+offset_right = 2.5
+offset_bottom = 206.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_1iemv")
+
+[node name="StatsPanel" type="Panel" parent="Main"]
+layout_mode = 0
+offset_left = 213.0
+offset_top = 21.0
+offset_right = 453.0
+offset_bottom = 269.0
+
+[node name="StatsLabel" type="Label" parent="Main/StatsPanel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -110.5
+offset_top = -122.5
+offset_right = 110.5
+offset_bottom = 122.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "CLASS:
+MAX HEALTH:
+STRENGHT:
+SPEED:
+ARMOR:
+MAGIC:
+
+"
+label_settings = SubResource("LabelSettings_ecdaf")
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="PanelLabel" type="ScrollContainer" parent="Main"]
+layout_mode = 0
+offset_left = 533.0
+offset_top = 208.0
+offset_right = 949.0
+offset_bottom = 368.0
+
+[node name="MainLabel" type="Label" parent="Main/PanelLabel"]
+custom_minimum_size = Vector2(410, 150)
+layout_mode = 2
+text = "asdf lsadjfe jlasefiaeso jfoasejfoa asdfsa seofijaosefj asdfalsdkjf  asldfj e jlasdf jlef la asdfasdlk fajsdlkjflaksjdflasjdflasjfslafjk asjdlfjas  laksjdf alksd aslkjd laskd alksjd flaksjd falksdjf laskdj falsjkdf aslkdjf djieifiefji i jfeifj ifeij ife ijeifijeifasfalsejfçslaejfls fejifejifjs feijfsisefse sdfk lskdflaksdjflasjiefjsiaelfjisefjlaseij jfsiejf jie fjifefiejfiasejfi "
+label_settings = SubResource("LabelSettings_mbgeo")
+autowrap_mode = 3
+
+[node name="TopPanel" type="Panel" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -200.5
+offset_top = -310.5
+offset_right = 200.5
+offset_bottom = -217.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_nnai0")
+
+[node name="GameOverLabel" type="Label" parent="TopPanel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -108.5
+offset_top = -31.5
+offset_right = 108.5
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "HUNTER'S LODGE"
+label_settings = SubResource("LabelSettings_jqioi")
+
+[node name="GoldPanel" type="Panel" parent="."]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -207.0
+offset_top = 1.0
+offset_right = -17.0
+offset_bottom = 109.0
+grow_horizontal = 0
+theme_override_styles/panel = SubResource("StyleBoxTexture_jjpvg")
+
+[node name="MeatLabel" type="Label" parent="GoldPanel"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -159.5
+offset_top = -27.5
+offset_right = -73.5
+offset_bottom = 3.5
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 8
+size_flags_vertical = 0
+text = "8 "
+label_settings = SubResource("LabelSettings_nqbjx")
+
+[node name="GoldLabel" type="Label" parent="GoldPanel"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -73.0
+offset_top = -27.0
+offset_right = 13.0
+offset_bottom = 4.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 8
+size_flags_vertical = 0
+text = "8 "
+label_settings = SubResource("LabelSettings_nqbjx")
+horizontal_alignment = 1
+
+[node name="GoldPicture" type="TextureRect" parent="GoldPanel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 14.5
+offset_top = -39.5
+offset_right = 142.5
+offset_bottom = 88.5
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.47, 0.47)
+texture = SubResource("AtlasTexture_dwhm5")
+
+[connection signal="focus_entered" from="Main/Hunt" to="." method="_on_hunt_focus_entered"]
+[connection signal="mouse_entered" from="Main/Hunt" to="." method="_on_hunt_mouse_entered"]
+[connection signal="pressed" from="Main/Hunt" to="." method="_on_hunt_pressed"]
+[connection signal="focus_entered" from="Main/Return" to="." method="_on_return_focus_entered"]
+[connection signal="mouse_entered" from="Main/Return" to="." method="_on_return_mouse_entered"]
+[connection signal="pressed" from="Main/Return" to="." method="_on_return_pressed"]
+[connection signal="focus_entered" from="Main/ContainerPlayer/PButton" to="." method="_on_p_button_focus_entered"]
+[connection signal="mouse_entered" from="Main/ContainerPlayer/PButton" to="." method="_on_p_button_mouse_entered"]
+[connection signal="pressed" from="Main/ContainerPlayer/PButton" to="." method="_on_p_button_pressed"]
+[connection signal="focus_entered" from="Main/ContainerPlayer/PButton2" to="." method="_on_p_button_2_focus_entered"]
+[connection signal="mouse_entered" from="Main/ContainerPlayer/PButton2" to="." method="_on_p_button_2_mouse_entered"]
+[connection signal="pressed" from="Main/ContainerPlayer/PButton2" to="." method="_on_p_button_2_pressed"]
+[connection signal="focus_entered" from="Main/ContainerPlayer/PButton3" to="." method="_on_p_button_3_focus_entered"]
+[connection signal="mouse_entered" from="Main/ContainerPlayer/PButton3" to="." method="_on_p_button_3_mouse_entered"]
+[connection signal="pressed" from="Main/ContainerPlayer/PButton3" to="." method="_on_p_button_3_pressed"]
+[connection signal="focus_entered" from="Main/ContainerPlayer/PButton4" to="." method="_on_p_button_4_focus_entered"]
+[connection signal="mouse_entered" from="Main/ContainerPlayer/PButton4" to="." method="_on_p_button_4_mouse_entered"]
+[connection signal="pressed" from="Main/ContainerPlayer/PButton4" to="." method="_on_p_button_4_pressed"]
+[connection signal="focus_entered" from="Main/ContainerPlayer/PButton5" to="." method="_on_p_button_5_focus_entered"]
+[connection signal="mouse_entered" from="Main/ContainerPlayer/PButton5" to="." method="_on_p_button_5_mouse_entered"]
+[connection signal="pressed" from="Main/ContainerPlayer/PButton5" to="." method="_on_p_button_5_pressed"]
+[connection signal="focus_entered" from="Main/ContainerPlayer/PButton6" to="." method="_on_p_button_6_focus_entered"]
+[connection signal="mouse_entered" from="Main/ContainerPlayer/PButton6" to="." method="_on_p_button_6_mouse_entered"]
+[connection signal="pressed" from="Main/ContainerPlayer/PButton6" to="." method="_on_p_button_6_pressed"]
+[connection signal="focus_entered" from="Main/ContainerStage/StButton" to="." method="_on_st_button_focus_entered"]
+[connection signal="mouse_entered" from="Main/ContainerStage/StButton" to="." method="_on_st_button_mouse_entered"]
+[connection signal="pressed" from="Main/ContainerStage/StButton" to="." method="_on_st_button_pressed"]
+[connection signal="focus_entered" from="Main/ContainerStage/StButton2" to="." method="_on_st_button_2_focus_entered"]
+[connection signal="mouse_entered" from="Main/ContainerStage/StButton2" to="." method="_on_st_button_2_mouse_entered"]
+[connection signal="pressed" from="Main/ContainerStage/StButton2" to="." method="_on_st_button_2_pressed"]
+[connection signal="focus_entered" from="Main/ContainerStage/StButton3" to="." method="_on_st_button_3_focus_entered"]
+[connection signal="mouse_entered" from="Main/ContainerStage/StButton3" to="." method="_on_st_button_3_mouse_entered"]
+[connection signal="pressed" from="Main/ContainerStage/StButton3" to="." method="_on_st_button_3_pressed"]
+[connection signal="focus_entered" from="Main/ContainerStage/StButton4" to="." method="_on_st_button_4_focus_entered"]
+[connection signal="mouse_entered" from="Main/ContainerStage/StButton4" to="." method="_on_st_button_4_mouse_entered"]
+[connection signal="pressed" from="Main/ContainerStage/StButton4" to="." method="_on_st_button_4_pressed"]
+[connection signal="focus_entered" from="Main/ContainerStage/StButton5" to="." method="_on_st_button_5_focus_entered"]
+[connection signal="mouse_entered" from="Main/ContainerStage/StButton5" to="." method="_on_st_button_5_mouse_entered"]
+[connection signal="pressed" from="Main/ContainerStage/StButton5" to="." method="_on_st_button_5_pressed"]
+[connection signal="focus_entered" from="Main/ContainerStage/StButton6" to="." method="_on_st_button_6_focus_entered"]
+[connection signal="mouse_entered" from="Main/ContainerStage/StButton6" to="." method="_on_st_button_6_mouse_entered"]
+[connection signal="pressed" from="Main/ContainerStage/StButton6" to="." method="_on_st_button_6_pressed"]
+[connection signal="focus_entered" from="Main/ContainerStage/StButton7" to="." method="_on_st_button_7_focus_entered"]
+[connection signal="mouse_entered" from="Main/ContainerStage/StButton7" to="." method="_on_st_button_7_mouse_entered"]
+[connection signal="pressed" from="Main/ContainerStage/StButton7" to="." method="_on_st_button_7_pressed"]
+[connection signal="focus_entered" from="Main/ContainerStage/StButton8" to="." method="_on_st_button_8_focus_entered"]
+[connection signal="mouse_entered" from="Main/ContainerStage/StButton8" to="." method="_on_st_button_8_mouse_entered"]
+[connection signal="pressed" from="Main/ContainerStage/StButton8" to="." method="_on_st_button_8_pressed"]
+[connection signal="focus_entered" from="Main/ContainerStage/StButton9" to="." method="_on_st_button_9_focus_entered"]
+[connection signal="mouse_entered" from="Main/ContainerStage/StButton9" to="." method="_on_st_button_9_mouse_entered"]
+[connection signal="pressed" from="Main/ContainerStage/StButton9" to="." method="_on_st_button_9_pressed"]
+[connection signal="focus_entered" from="Main/ContainerStage/StButton10" to="." method="_on_st_button_10_focus_entered"]
+[connection signal="mouse_entered" from="Main/ContainerStage/StButton10" to="." method="_on_st_button_10_mouse_entered"]
+[connection signal="pressed" from="Main/ContainerStage/StButton10" to="." method="_on_st_button_10_pressed"]
+[connection signal="focus_entered" from="Main/ContainerSkills/SButton" to="." method="_on_s_button_focus_entered"]
+[connection signal="mouse_entered" from="Main/ContainerSkills/SButton" to="." method="_on_s_button_mouse_entered"]
+[connection signal="pressed" from="Main/ContainerSkills/SButton" to="." method="_on_s_button_pressed"]
+[connection signal="focus_entered" from="Main/ContainerSkills/SButton2" to="." method="_on_s_button_2_focus_entered"]
+[connection signal="mouse_entered" from="Main/ContainerSkills/SButton2" to="." method="_on_s_button_2_mouse_entered"]
+[connection signal="pressed" from="Main/ContainerSkills/SButton2" to="." method="_on_s_button_2_pressed"]
+[connection signal="focus_entered" from="Main/ContainerSkills/SButton3" to="." method="_on_s_button_3_focus_entered"]
+[connection signal="mouse_entered" from="Main/ContainerSkills/SButton3" to="." method="_on_s_button_3_mouse_entered"]
+[connection signal="pressed" from="Main/ContainerSkills/SButton3" to="." method="_on_s_button_3_pressed"]
+[connection signal="focus_entered" from="Main/ContainerSkills/SButton4" to="." method="_on_s_button_4_focus_entered"]
+[connection signal="mouse_entered" from="Main/ContainerSkills/SButton4" to="." method="_on_s_button_4_mouse_entered"]
+[connection signal="pressed" from="Main/ContainerSkills/SButton4" to="." method="_on_s_button_4_pressed"]
+[connection signal="focus_entered" from="Main/ContainerSkills/SButton5" to="." method="_on_s_button_5_focus_entered"]
+[connection signal="mouse_entered" from="Main/ContainerSkills/SButton5" to="." method="_on_s_button_5_mouse_entered"]
+[connection signal="pressed" from="Main/ContainerSkills/SButton5" to="." method="_on_s_button_5_pressed"]
+[connection signal="focus_entered" from="Main/ContainerSkills/SButton6" to="." method="_on_s_button_6_focus_entered"]
+[connection signal="mouse_entered" from="Main/ContainerSkills/SButton6" to="." method="_on_s_button_6_mouse_entered"]
+[connection signal="pressed" from="Main/ContainerSkills/SButton6" to="." method="_on_s_button_6_pressed"]
+[connection signal="focus_entered" from="Main/ContainerSkills/SButton7" to="." method="_on_s_button_7_focus_entered"]
+[connection signal="mouse_entered" from="Main/ContainerSkills/SButton7" to="." method="_on_s_button_7_mouse_entered"]
+[connection signal="pressed" from="Main/ContainerSkills/SButton7" to="." method="_on_s_button_7_pressed"]
+[connection signal="focus_entered" from="Main/ContainerSkills/SButton8" to="." method="_on_s_button_8_focus_entered"]
+[connection signal="mouse_entered" from="Main/ContainerSkills/SButton8" to="." method="_on_s_button_8_mouse_entered"]
+[connection signal="pressed" from="Main/ContainerSkills/SButton8" to="." method="_on_s_button_8_pressed"]
+[connection signal="focus_entered" from="Main/ContainerSkills/SButton9" to="." method="_on_s_button_9_focus_entered"]
+[connection signal="mouse_entered" from="Main/ContainerSkills/SButton9" to="." method="_on_s_button_9_mouse_entered"]
+[connection signal="pressed" from="Main/ContainerSkills/SButton9" to="." method="_on_s_button_9_pressed"]
+[connection signal="focus_entered" from="Main/ContainerSkills/SButton10" to="." method="_on_s_button_10_focus_entered"]
+[connection signal="mouse_entered" from="Main/ContainerSkills/SButton10" to="." method="_on_s_button_10_mouse_entered"]
+[connection signal="pressed" from="Main/ContainerSkills/SButton10" to="." method="_on_s_button_10_pressed"]

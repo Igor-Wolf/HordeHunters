@@ -1,0 +1,435 @@
+[gd_scene load_steps=23 format=3 uid="uid://p8u36s6u84xd"]
+
+[ext_resource type="Script" path="res://ui/game_over_ui.gd" id="1_jww2q"]
+[ext_resource type="Texture2D" uid="uid://cm2pebd7hjgts" path="res://addons/Tiny Swords/UI/Ribbons/Ribbon_Red_3Slides.png" id="1_k5axb"]
+[ext_resource type="Texture2D" uid="uid://bfl0nawrd2oqp" path="res://addons/Tiny Swords/UI/Banners/Banner_Vertical.png" id="2_ct78f"]
+[ext_resource type="Texture2D" uid="uid://chc3qx3hgpae0" path="res://addons/Tiny Swords/UI/Buttons/Button_Blue.png" id="4_gy608"]
+[ext_resource type="Texture2D" uid="uid://dq8frci2nfyr7" path="res://addons/Tiny Swords/UI/Buttons/Button_Hover.png" id="5_wishj"]
+[ext_resource type="Texture2D" uid="uid://divxeb51qhg7b" path="res://addons/Tiny Swords/UI/Buttons/Button_Blue_Pressed.png" id="6_kk5g8"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_suq2q"]
+texture = ExtResource("1_k5axb")
+texture_margin_left = 64.0
+texture_margin_right = 64.0
+axis_stretch_horizontal = 2
+
+[sub_resource type="SystemFont" id="SystemFont_r14x6"]
+font_names = PackedStringArray("Impact")
+subpixel_positioning = 0
+
+[sub_resource type="LabelSettings" id="LabelSettings_3vsic"]
+line_spacing = 20.0
+font = SubResource("SystemFont_r14x6")
+font_size = 34
+outline_size = 9
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_nbfvf"]
+texture = ExtResource("2_ct78f")
+texture_margin_left = 32.0
+texture_margin_top = 96.0
+texture_margin_right = 32.0
+texture_margin_bottom = 96.0
+axis_stretch_horizontal = 2
+axis_stretch_vertical = 1
+region_rect = Rect2(32, 32, 128, 128)
+
+[sub_resource type="SystemFont" id="SystemFont_be78t"]
+font_names = PackedStringArray("Impact")
+
+[sub_resource type="LabelSettings" id="LabelSettings_kan7b"]
+font = SubResource("SystemFont_be78t")
+font_size = 30
+font_color = Color(0, 0, 0, 0.870588)
+outline_size = 3
+
+[sub_resource type="SystemFont" id="SystemFont_r8hde"]
+font_names = PackedStringArray("Impact")
+subpixel_positioning = 0
+
+[sub_resource type="LabelSettings" id="LabelSettings_8yv3x"]
+font = SubResource("SystemFont_r8hde")
+font_size = 22
+font_color = Color(0, 0, 0, 0.870588)
+outline_size = 3
+
+[sub_resource type="SystemFont" id="SystemFont_efnsn"]
+font_names = PackedStringArray("Impact")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_fhqb3"]
+texture = ExtResource("4_gy608")
+texture_margin_left = 16.0
+texture_margin_top = 8.0
+texture_margin_right = 16.0
+texture_margin_bottom = 24.0
+modulate_color = Color(0.552941, 0.705882, 0.741176, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_hcjdt"]
+texture = ExtResource("5_wishj")
+texture_margin_left = 16.0
+texture_margin_top = 8.0
+texture_margin_right = 16.0
+texture_margin_bottom = 24.0
+region_rect = Rect2(0, 0, 64, 64)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8q5tc"]
+texture = ExtResource("6_kk5g8")
+texture_margin_left = 16.0
+texture_margin_top = 16.0
+texture_margin_right = 16.0
+texture_margin_bottom = 24.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_atlpq"]
+texture = ExtResource("5_wishj")
+texture_margin_left = 16.0
+texture_margin_top = 8.0
+texture_margin_right = 16.0
+texture_margin_bottom = 24.0
+region_rect = Rect2(0, 0, 64, 64)
+
+[sub_resource type="Animation" id="Animation_65ls3"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Background:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 0.772549)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("TopPanel:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(437, 40.5)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("BottonPanel:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(377.5, 157.5)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("TopPanel:anchors_preset")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [8]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("BottonPanel:anchors_preset")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [8]
+}
+
+[sub_resource type="Animation" id="Animation_peyxw"]
+resource_name = "default"
+length = 1.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Background:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 0), Color(0, 0, 0, 0.756863)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("TopPanel:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(437, -50), Vector2(437, 40.5)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("BottonPanel:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(377.5, 500), Vector2(377.5, 157.5)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("TopPanel:anchors_preset")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [5, 8]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("BottonPanel:anchors_preset")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [7, 8]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_o1eoc"]
+_data = {
+"RESET": SubResource("Animation_65ls3"),
+"default": SubResource("Animation_peyxw")
+}
+
+[node name="GameOverUI" type="CanvasLayer"]
+process_mode = 3
+script = ExtResource("1_jww2q")
+
+[node name="Background" type="ColorRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.772549)
+
+[node name="TopPanel" type="Panel" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 437.0
+offset_top = 40.5
+offset_right = 715.0
+offset_bottom = 133.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_suq2q")
+
+[node name="GameOverLabel" type="Label" parent="TopPanel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -46.0
+offset_top = -21.5
+offset_right = 46.0
+offset_bottom = 1.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "GAME OVER"
+label_settings = SubResource("LabelSettings_3vsic")
+
+[node name="BottonPanel" type="Panel" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 377.5
+offset_top = 157.5
+offset_right = 774.5
+offset_bottom = 566.501
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_nbfvf")
+
+[node name="Results" type="Label" parent="BottonPanel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -86.5
+offset_top = -178.0
+offset_right = 86.5
+offset_bottom = -140.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "HUNT RESULTS:"
+label_settings = SubResource("LabelSettings_kan7b")
+vertical_alignment = 1
+
+[node name="GridContainer" type="GridContainer" parent="BottonPanel"]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -126.5
+offset_top = -124.0
+offset_right = 126.5
+offset_bottom = 76.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/h_separation = 25
+theme_override_constants/v_separation = 15
+columns = 2
+
+[node name="Label" type="Label" parent="BottonPanel/GridContainer"]
+layout_mode = 2
+text = "TIME SURVIVED: 
+"
+label_settings = SubResource("LabelSettings_8yv3x")
+
+[node name="TimeLabel" type="Label" parent="BottonPanel/GridContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "14:59
+"
+label_settings = SubResource("LabelSettings_8yv3x")
+
+[node name="Label2" type="Label" parent="BottonPanel/GridContainer"]
+layout_mode = 2
+text = "MONSTERS DEFEATED: 
+"
+label_settings = SubResource("LabelSettings_8yv3x")
+
+[node name="MonstersLabel" type="Label" parent="BottonPanel/GridContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "1234
+"
+label_settings = SubResource("LabelSettings_8yv3x")
+
+[node name="Label3" type="Label" parent="BottonPanel/GridContainer"]
+layout_mode = 2
+text = "MEAT COLLECTED:
+"
+label_settings = SubResource("LabelSettings_8yv3x")
+
+[node name="MeatLabel" type="Label" parent="BottonPanel/GridContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "1234
+"
+label_settings = SubResource("LabelSettings_8yv3x")
+
+[node name="Label4" type="Label" parent="BottonPanel/GridContainer"]
+layout_mode = 2
+text = "EXPERIENCE EARNED: 
+"
+label_settings = SubResource("LabelSettings_8yv3x")
+
+[node name="ExpEarned" type="Label" parent="BottonPanel/GridContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "1234
+"
+label_settings = SubResource("LabelSettings_8yv3x")
+
+[node name="Label5" type="Label" parent="BottonPanel/GridContainer"]
+layout_mode = 2
+text = "TOTAL GOLD: 
+"
+label_settings = SubResource("LabelSettings_8yv3x")
+
+[node name="TotalGold" type="Label" parent="BottonPanel/GridContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "1234
+"
+label_settings = SubResource("LabelSettings_8yv3x")
+
+[node name="GridContainer2" type="GridContainer" parent="BottonPanel"]
+custom_minimum_size = Vector2(52, 150)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -170.0
+offset_top = 101.0
+offset_right = 170.0
+offset_bottom = 251.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/h_separation = 0
+columns = 2
+
+[node name="Retry" type="Button" parent="BottonPanel/GridContainer2"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(170, 55)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = SubResource("SystemFont_efnsn")
+theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = SubResource("StyleBoxTexture_fhqb3")
+theme_override_styles/hover = SubResource("StyleBoxTexture_hcjdt")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_8q5tc")
+theme_override_styles/focus = SubResource("StyleBoxTexture_atlpq")
+text = "RETRY"
+
+[node name="MainMenu" type="Button" parent="BottonPanel/GridContainer2"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(170, 55)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = SubResource("SystemFont_efnsn")
+theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = SubResource("StyleBoxTexture_fhqb3")
+theme_override_styles/hover = SubResource("StyleBoxTexture_hcjdt")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_8q5tc")
+theme_override_styles/focus = SubResource("StyleBoxTexture_atlpq")
+text = "MAIN MENU"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_o1eoc")
+}
+autoplay = "default"
+
+[connection signal="mouse_entered" from="BottonPanel/GridContainer2/Retry" to="." method="_on_retry_mouse_entered"]
+[connection signal="pressed" from="BottonPanel/GridContainer2/Retry" to="." method="_on_retry_pressed"]
+[connection signal="mouse_entered" from="BottonPanel/GridContainer2/MainMenu" to="." method="_on_main_menu_mouse_entered"]
+[connection signal="pressed" from="BottonPanel/GridContainer2/MainMenu" to="." method="_on_main_menu_pressed"]

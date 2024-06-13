@@ -1,0 +1,186 @@
+[gd_scene load_steps=15 format=3 uid="uid://dgehsmhw5k4eb"]
+
+[ext_resource type="Script" path="res://ui/game_ui.gd" id="1_8flki"]
+[ext_resource type="Texture2D" uid="uid://baqx0ecgu5jpb" path="res://addons/Tiny Swords/UI/Banners/Banner_Horizontal.png" id="1_y8tfv"]
+[ext_resource type="Texture2D" uid="uid://cbbm4yltrvgnn" path="res://addons/Tiny Swords/Resources/Resources/G_Idle_(NoShadow).png" id="4_m224j"]
+
+[sub_resource type="SystemFont" id="SystemFont_ajpqh"]
+font_names = PackedStringArray("Impact")
+subpixel_positioning = 0
+
+[sub_resource type="LabelSettings" id="LabelSettings_rpfrf"]
+font = SubResource("SystemFont_ajpqh")
+font_size = 50
+outline_size = 12
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_rkl5w"]
+texture = ExtResource("1_y8tfv")
+texture_margin_left = 32.0
+texture_margin_top = 32.0
+texture_margin_right = 32.0
+texture_margin_bottom = 48.0
+axis_stretch_horizontal = 2
+axis_stretch_vertical = 2
+region_rect = Rect2(32, 40, 128, 136)
+
+[sub_resource type="SystemFont" id="SystemFont_18wwv"]
+font_names = PackedStringArray("Impact")
+subpixel_positioning = 0
+
+[sub_resource type="LabelSettings" id="LabelSettings_4ekwq"]
+font = SubResource("SystemFont_18wwv")
+font_size = 24
+font_color = Color(0, 0, 0, 1)
+shadow_size = 0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xkxq0"]
+atlas = ExtResource("4_m224j")
+region = Rect2(40, 48, 56, 56)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_pct1s"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mdn5x"]
+bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7vfmf"]
+bg_color = Color(0.054902, 0.678431, 0.752941, 0.776471)
+
+[sub_resource type="SystemFont" id="SystemFont_qyfa1"]
+font_names = PackedStringArray("Impact")
+subpixel_positioning = 0
+
+[sub_resource type="LabelSettings" id="LabelSettings_f013a"]
+font = SubResource("SystemFont_qyfa1")
+font_size = 22
+outline_size = 3
+outline_color = Color(0, 0, 0, 1)
+
+[node name="GameUI" type="CanvasLayer"]
+script = ExtResource("1_8flki")
+
+[node name="TimerLabel" type="Label" parent="."]
+unique_name_in_owner = true
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -58.0
+offset_top = 48.0
+offset_right = 58.0
+offset_bottom = 110.0
+grow_horizontal = 2
+size_flags_horizontal = 8
+size_flags_vertical = 0
+text = "8:00"
+label_settings = SubResource("LabelSettings_rpfrf")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Panel2" type="Panel" parent="."]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -207.0
+offset_top = 10.0
+offset_right = -17.0
+offset_bottom = 118.0
+grow_horizontal = 0
+theme_override_styles/panel = SubResource("StyleBoxTexture_rkl5w")
+
+[node name="MeatLabel" type="Label" parent="Panel2"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -244.0
+offset_top = -27.0
+offset_right = -122.0
+offset_bottom = 4.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 8
+size_flags_vertical = 0
+text = "8 "
+label_settings = SubResource("LabelSettings_4ekwq")
+
+[node name="GoldLabel" type="Label" parent="Panel2"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -73.0
+offset_top = -27.0
+offset_right = 13.0
+offset_bottom = 4.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 8
+size_flags_vertical = 0
+text = "8 "
+label_settings = SubResource("LabelSettings_4ekwq")
+horizontal_alignment = 1
+
+[node name="GoldPicture" type="TextureRect" parent="Panel2"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 14.5
+offset_top = -39.5
+offset_right = 142.5
+offset_bottom = 88.5
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.47, 0.47)
+texture = SubResource("AtlasTexture_xkxq0")
+
+[node name="Panel" type="Panel" parent="."]
+offset_right = 427.0
+offset_bottom = 95.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_pct1s")
+
+[node name="ProgressBar" type="ProgressBar" parent="Panel"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -169.5
+offset_top = -27.0
+offset_right = 177.5
+offset_bottom = -12.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_styles/background = SubResource("StyleBoxFlat_mdn5x")
+theme_override_styles/fill = SubResource("StyleBoxFlat_7vfmf")
+show_percentage = false
+
+[node name="Exp" type="Label" parent="Panel"]
+unique_name_in_owner = true
+layout_mode = 1
+offset_left = 44.0
+offset_top = 35.0
+offset_right = 80.0
+offset_bottom = 63.0
+text = "EXP"
+label_settings = SubResource("LabelSettings_f013a")
+
+[node name="Lv" type="Label" parent="Panel"]
+unique_name_in_owner = true
+layout_mode = 1
+offset_left = 297.0
+offset_top = 35.0
+offset_right = 333.0
+offset_bottom = 63.0
+text = "LV:"
+label_settings = SubResource("LabelSettings_f013a")

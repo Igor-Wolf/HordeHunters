@@ -1,0 +1,376 @@
+[gd_scene load_steps=18 format=3 uid="uid://come7jt06x0go"]
+
+[ext_resource type="Texture2D" uid="uid://cm2pebd7hjgts" path="res://addons/Tiny Swords/UI/Ribbons/Ribbon_Red_3Slides.png" id="1_0r3fm"]
+[ext_resource type="Script" path="res://ui/achievements_ui.gd" id="1_utj0v"]
+[ext_resource type="Texture2D" uid="uid://baqx0ecgu5jpb" path="res://addons/Tiny Swords/UI/Banners/Banner_Horizontal.png" id="2_57pn0"]
+[ext_resource type="Texture2D" uid="uid://chc3qx3hgpae0" path="res://addons/Tiny Swords/UI/Buttons/Button_Blue.png" id="3_y072w"]
+[ext_resource type="Texture2D" uid="uid://dq8frci2nfyr7" path="res://addons/Tiny Swords/UI/Buttons/Button_Hover.png" id="4_tygtp"]
+[ext_resource type="Texture2D" uid="uid://divxeb51qhg7b" path="res://addons/Tiny Swords/UI/Buttons/Button_Blue_Pressed.png" id="5_b16j6"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2tl7r"]
+texture = ExtResource("1_0r3fm")
+texture_margin_left = 64.0
+texture_margin_right = 64.0
+axis_stretch_horizontal = 2
+
+[sub_resource type="SystemFont" id="SystemFont_ykhyr"]
+font_names = PackedStringArray("Impact")
+subpixel_positioning = 0
+
+[sub_resource type="LabelSettings" id="LabelSettings_46t5n"]
+line_spacing = 20.0
+font = SubResource("SystemFont_ykhyr")
+font_size = 34
+outline_size = 9
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_7l0vm"]
+texture = ExtResource("2_57pn0")
+texture_margin_left = 24.0
+texture_margin_top = 8.0
+texture_margin_right = 24.0
+texture_margin_bottom = 40.0
+region_rect = Rect2(32, 48, 128, 128)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_nuoyf"]
+
+[sub_resource type="SystemFont" id="SystemFont_rlv2o"]
+font_names = PackedStringArray("Impact")
+
+[sub_resource type="SystemFont" id="SystemFont_wmjfs"]
+font_names = PackedStringArray("Impact")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_rau1o"]
+texture = ExtResource("3_y072w")
+texture_margin_left = 16.0
+texture_margin_top = 8.0
+texture_margin_right = 16.0
+texture_margin_bottom = 24.0
+modulate_color = Color(0.552941, 0.705882, 0.741176, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0minv"]
+texture = ExtResource("4_tygtp")
+texture_margin_left = 16.0
+texture_margin_top = 8.0
+texture_margin_right = 16.0
+texture_margin_bottom = 24.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_x6380"]
+texture = ExtResource("5_b16j6")
+texture_margin_left = 16.0
+texture_margin_top = 16.0
+texture_margin_right = 16.0
+texture_margin_bottom = 24.0
+region_rect = Rect2(0, 0, 64, 64)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_gym8v"]
+texture = ExtResource("4_tygtp")
+texture_margin_left = 16.0
+texture_margin_top = 8.0
+texture_margin_right = 16.0
+texture_margin_bottom = 24.0
+
+[node name="AchievementsUi" type="CanvasLayer"]
+script = ExtResource("1_utj0v")
+
+[node name="Background" type="ColorRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.337255)
+
+[node name="TopPanel" type="Panel" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -185.0
+offset_top = -283.5
+offset_right = 185.0
+offset_bottom = -190.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_2tl7r")
+
+[node name="GameOverLabel" type="Label" parent="TopPanel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -58.5
+offset_top = -31.5
+offset_right = 58.5
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "ACHIEVEMENTS"
+label_settings = SubResource("LabelSettings_46t5n")
+
+[node name="Panel2" type="Panel" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -226.0
+offset_top = -169.0
+offset_right = 227.0
+offset_bottom = 200.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_7l0vm")
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Panel2"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -191.5
+offset_top = -156.5
+offset_right = 191.5
+offset_bottom = 58.5
+grow_horizontal = 2
+grow_vertical = 2
+horizontal_scroll_mode = 0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel2/ScrollContainer"]
+custom_minimum_size = Vector2(0, 300)
+layout_mode = 2
+theme_override_constants/separation = 41
+
+[node name="a1" type="Button" parent="Panel2/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxEmpty_nuoyf")
+
+[node name="Panel2" type="Panel" parent="Panel2/ScrollContainer/VBoxContainer/a1"]
+layout_mode = 0
+offset_right = 383.0
+offset_bottom = 40.0
+
+[node name="Label" type="RichTextLabel" parent="Panel2/ScrollContainer/VBoxContainer/a1"]
+layout_mode = 0
+offset_right = 383.0
+offset_bottom = 90.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 6
+theme_override_fonts/normal_font = SubResource("SystemFont_rlv2o")
+bbcode_enabled = true
+text = "[font_size=15][b]01 - WELCOME TO THE HUNTING[/b][/font_size]
+[font_size=13]   DEFEATED AN ENEMY
+[/font_size]
+
+"
+
+[node name="Panel" type="Panel" parent="Panel2/ScrollContainer/VBoxContainer/a1"]
+layout_mode = 0
+offset_right = 383.0
+offset_bottom = 40.0
+
+[node name="a2" type="Button" parent="Panel2/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxEmpty_nuoyf")
+
+[node name="Panel2" type="Panel" parent="Panel2/ScrollContainer/VBoxContainer/a2"]
+layout_mode = 0
+offset_right = 383.0
+offset_bottom = 40.0
+
+[node name="Label" type="RichTextLabel" parent="Panel2/ScrollContainer/VBoxContainer/a2"]
+layout_mode = 0
+offset_right = 383.0
+offset_bottom = 90.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 6
+theme_override_fonts/normal_font = SubResource("SystemFont_rlv2o")
+bbcode_enabled = true
+text = "[font_size=15][b]02 - EVERY DOG HAS ITS DAY[/b][/font_size]
+[font_size=13]   DIED ONCE
+[/font_size]
+
+"
+
+[node name="Panel" type="Panel" parent="Panel2/ScrollContainer/VBoxContainer/a2"]
+layout_mode = 0
+offset_right = 383.0
+offset_bottom = 40.0
+
+[node name="a3" type="Button" parent="Panel2/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxEmpty_nuoyf")
+
+[node name="Panel2" type="Panel" parent="Panel2/ScrollContainer/VBoxContainer/a3"]
+layout_mode = 0
+offset_right = 383.0
+offset_bottom = 40.0
+
+[node name="Label" type="RichTextLabel" parent="Panel2/ScrollContainer/VBoxContainer/a3"]
+layout_mode = 0
+offset_right = 383.0
+offset_bottom = 90.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 6
+theme_override_fonts/normal_font = SubResource("SystemFont_rlv2o")
+bbcode_enabled = true
+text = "[font_size=15][b]03 - GOING SHOPPING[/b][/font_size]
+[font_size=13]   BUY SOMETHING
+[/font_size]
+
+"
+
+[node name="Panel" type="Panel" parent="Panel2/ScrollContainer/VBoxContainer/a3"]
+layout_mode = 0
+offset_right = 383.0
+offset_bottom = 40.0
+
+[node name="a4" type="Button" parent="Panel2/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxEmpty_nuoyf")
+
+[node name="Panel2" type="Panel" parent="Panel2/ScrollContainer/VBoxContainer/a4"]
+layout_mode = 0
+offset_right = 383.0
+offset_bottom = 40.0
+
+[node name="Label" type="RichTextLabel" parent="Panel2/ScrollContainer/VBoxContainer/a4"]
+layout_mode = 0
+offset_right = 383.0
+offset_bottom = 90.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 6
+theme_override_fonts/normal_font = SubResource("SystemFont_rlv2o")
+bbcode_enabled = true
+text = "[font_size=15][b]04 - STEEL BREATH[/b][/font_size]
+[font_size=13]   SURVIVED 15 MINUTES ON A HUNT
+[/font_size]
+
+"
+
+[node name="Panel" type="Panel" parent="Panel2/ScrollContainer/VBoxContainer/a4"]
+layout_mode = 0
+offset_right = 383.0
+offset_bottom = 40.0
+
+[node name="a5" type="Button" parent="Panel2/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxEmpty_nuoyf")
+
+[node name="Panel2" type="Panel" parent="Panel2/ScrollContainer/VBoxContainer/a5"]
+layout_mode = 0
+offset_right = 383.0
+offset_bottom = 40.0
+
+[node name="Label" type="RichTextLabel" parent="Panel2/ScrollContainer/VBoxContainer/a5"]
+layout_mode = 0
+offset_right = 383.0
+offset_bottom = 90.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 6
+theme_override_fonts/normal_font = SubResource("SystemFont_rlv2o")
+bbcode_enabled = true
+text = "[font_size=15][b]05 - ALL WIN[/b][/font_size]
+[font_size=13]   PURCHASED ALL SKILLS OF A CHARACTER
+[/font_size]
+
+"
+
+[node name="Panel" type="Panel" parent="Panel2/ScrollContainer/VBoxContainer/a5"]
+layout_mode = 0
+offset_right = 383.0
+offset_bottom = 40.0
+
+[node name="a6" type="Button" parent="Panel2/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxEmpty_nuoyf")
+
+[node name="Panel2" type="Panel" parent="Panel2/ScrollContainer/VBoxContainer/a6"]
+layout_mode = 0
+offset_right = 383.0
+offset_bottom = 40.0
+
+[node name="Label" type="RichTextLabel" parent="Panel2/ScrollContainer/VBoxContainer/a6"]
+layout_mode = 0
+offset_right = 383.0
+offset_bottom = 90.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 6
+theme_override_fonts/normal_font = SubResource("SystemFont_rlv2o")
+bbcode_enabled = true
+text = "[font_size=15][b]06 - GLUTTON[/b][/font_size]
+[font_size=13]   ATE 200 MEAT
+[/font_size]
+
+"
+
+[node name="Panel" type="Panel" parent="Panel2/ScrollContainer/VBoxContainer/a6"]
+layout_mode = 0
+offset_right = 383.0
+offset_bottom = 40.0
+
+[node name="a7" type="Button" parent="Panel2/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxEmpty_nuoyf")
+
+[node name="Panel2" type="Panel" parent="Panel2/ScrollContainer/VBoxContainer/a7"]
+layout_mode = 0
+offset_right = 383.0
+offset_bottom = 40.0
+
+[node name="Label" type="RichTextLabel" parent="Panel2/ScrollContainer/VBoxContainer/a7"]
+layout_mode = 0
+offset_right = 383.0
+offset_bottom = 90.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 6
+theme_override_fonts/normal_font = SubResource("SystemFont_rlv2o")
+bbcode_enabled = true
+text = "[font_size=15][b]07 - EASY PREY[/b][/font_size]
+[font_size=13]   DEFEAT THE FIRST BOSS
+[/font_size]
+
+"
+
+[node name="Panel" type="Panel" parent="Panel2/ScrollContainer/VBoxContainer/a7"]
+layout_mode = 0
+offset_right = 383.0
+offset_bottom = 40.0
+
+[node name="Return" type="Button" parent="Panel2"]
+unique_name_in_owner = true
+process_mode = 3
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -100.0
+offset_top = 81.5
+offset_right = 100.0
+offset_bottom = 144.5
+grow_horizontal = 2
+grow_vertical = 2
+focus_neighbor_left = NodePath(".")
+focus_neighbor_top = NodePath(".")
+focus_neighbor_right = NodePath(".")
+focus_neighbor_bottom = NodePath(".")
+focus_next = NodePath(".")
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = SubResource("SystemFont_wmjfs")
+theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = SubResource("StyleBoxTexture_rau1o")
+theme_override_styles/hover = SubResource("StyleBoxTexture_0minv")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_x6380")
+theme_override_styles/focus = SubResource("StyleBoxTexture_gym8v")
+text = "RETURN
+"
+
+[connection signal="mouse_entered" from="Panel2/Return" to="." method="_on_return_mouse_entered"]
+[connection signal="pressed" from="Panel2/Return" to="." method="_on_return_pressed"]

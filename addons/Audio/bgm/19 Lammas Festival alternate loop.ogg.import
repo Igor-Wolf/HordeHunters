@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://btuyimfjytkmn"
+path="res://.godot/imported/19 Lammas Festival alternate loop.ogg-efab8261d754e0314fd72902962dc88d.oggvorbisstr"
+
+[deps]
+
+source_file="res://addons/Audio/bgm/19 Lammas Festival alternate loop.ogg"
+dest_files=["res://.godot/imported/19 Lammas Festival alternate loop.ogg-efab8261d754e0314fd72902962dc88d.oggvorbisstr"]
+
+[params]
+
+loop=true
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
